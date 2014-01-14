@@ -1,4 +1,4 @@
-package com.google.dogecoin.core;
+package com.google.monacoin.core;
 
 import java.net.InetSocketAddress;
 import java.util.HashMap;

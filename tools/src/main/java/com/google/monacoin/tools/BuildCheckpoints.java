@@ -1,11 +1,11 @@
-package com.google.dogecoin.tools;
+package com.google.monacoin.tools;
 
-import com.google.dogecoin.core.*;
-import com.google.dogecoin.params.MainNetParams;
-import com.google.dogecoin.store.BlockStore;
-import com.google.dogecoin.store.MemoryBlockStore;
-import com.google.dogecoin.utils.BriefLogFormatter;
-import com.google.dogecoin.utils.Threading;
+import com.google.monacoin.core.*;
+import com.google.monacoin.params.MainNetParams;
+import com.google.monacoin.store.BlockStore;
+import com.google.monacoin.store.MemoryBlockStore;
+import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.monacoin.utils.Threading;
 
 import java.io.DataOutputStream;
 import java.io.FileInputStream;

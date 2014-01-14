@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.core;
+package com.google.monacoin.core;
 
-import com.google.dogecoin.net.*;
-import com.google.dogecoin.params.UnitTestParams;
-import com.google.dogecoin.store.BlockStore;
-import com.google.dogecoin.store.MemoryBlockStore;
-import com.google.dogecoin.utils.BriefLogFormatter;
-import com.google.dogecoin.utils.Threading;
+import com.google.monacoin.net.*;
+import com.google.monacoin.params.UnitTestParams;
+import com.google.monacoin.store.BlockStore;
+import com.google.monacoin.store.MemoryBlockStore;
+import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.monacoin.utils.Threading;
 import com.google.common.util.concurrent.SettableFuture;
 
 import java.io.IOException;

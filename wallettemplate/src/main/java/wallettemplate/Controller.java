@@ -1,9 +1,9 @@
 package wallettemplate;
 
-import com.google.dogecoin.core.AbstractWalletEventListener;
-import com.google.dogecoin.core.DownloadListener;
-import com.google.dogecoin.core.Utils;
-import com.google.dogecoin.core.Wallet;
+import com.google.monacoin.core.AbstractWalletEventListener;
+import com.google.monacoin.core.DownloadListener;
+import com.google.monacoin.core.Utils;
+import com.google.monacoin.core.Wallet;
 import javafx.animation.*;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;

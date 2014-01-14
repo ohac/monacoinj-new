@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.net;
+package com.google.monacoin.net;
 
-import com.google.dogecoin.core.Utils;
-import com.google.dogecoin.utils.Threading;
+import com.google.monacoin.core.Utils;
+import com.google.monacoin.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.MessageLite;

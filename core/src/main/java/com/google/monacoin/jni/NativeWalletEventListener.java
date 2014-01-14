@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.jni;
+package com.google.monacoin.jni;
 
-import com.google.dogecoin.core.ECKey;
-import com.google.dogecoin.core.Transaction;
-import com.google.dogecoin.core.Wallet;
-import com.google.dogecoin.core.WalletEventListener;
-import com.google.dogecoin.script.Script;
+import com.google.monacoin.core.ECKey;
+import com.google.monacoin.core.Transaction;
+import com.google.monacoin.core.Wallet;
+import com.google.monacoin.core.WalletEventListener;
+import com.google.monacoin.script.Script;
 
 import java.math.BigInteger;
 import java.util.List;

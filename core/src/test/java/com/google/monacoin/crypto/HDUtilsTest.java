@@ -1,6 +1,6 @@
-package com.google.dogecoin.crypto;
+package com.google.monacoin.crypto;
 
-import com.google.dogecoin.core.ECKey;
+import com.google.monacoin.core.ECKey;
 import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;

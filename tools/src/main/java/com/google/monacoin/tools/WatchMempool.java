@@ -1,9 +1,9 @@
-package com.google.dogecoin.tools;
+package com.google.monacoin.tools;
 
-import com.google.dogecoin.core.*;
-import com.google.dogecoin.net.discovery.DnsDiscovery;
-import com.google.dogecoin.params.MainNetParams;
-import com.google.dogecoin.utils.BriefLogFormatter;
+import com.google.monacoin.core.*;
+import com.google.monacoin.net.discovery.DnsDiscovery;
+import com.google.monacoin.params.MainNetParams;
+import com.google.monacoin.utils.BriefLogFormatter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

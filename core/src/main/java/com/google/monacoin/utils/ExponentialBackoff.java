@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.utils;
+package com.google.monacoin.utils;
 
-import com.google.dogecoin.core.Utils;
+import com.google.monacoin.core.Utils;
 
 import static com.google.common.base.Preconditions.checkArgument;
 

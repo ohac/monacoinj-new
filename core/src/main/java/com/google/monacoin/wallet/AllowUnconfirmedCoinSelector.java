@@ -1,6 +1,6 @@
-package com.google.dogecoin.wallet;
+package com.google.monacoin.wallet;
 
-import com.google.dogecoin.core.Transaction;
+import com.google.monacoin.core.Transaction;
 
 /**
  * This coin selector will select any transaction at all, regardless of where it came from or whether it was

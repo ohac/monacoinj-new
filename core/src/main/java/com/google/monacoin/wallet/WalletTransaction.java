@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.wallet;
+package com.google.monacoin.wallet;
 
-import com.google.dogecoin.core.Transaction;
+import com.google.monacoin.core.Transaction;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
- * Stores data about a transaction that is only relevant to the {@link com.google.dogecoin.core.Wallet} class.
+ * Stores data about a transaction that is only relevant to the {@link com.google.monacoin.core.Wallet} class.
  */
 public class WalletTransaction {
     public enum Pool {

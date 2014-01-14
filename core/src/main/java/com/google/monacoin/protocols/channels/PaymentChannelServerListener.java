@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.protocols.channels;
+package com.google.monacoin.protocols.channels;
 
-import com.google.dogecoin.core.Sha256Hash;
-import com.google.dogecoin.core.TransactionBroadcaster;
-import com.google.dogecoin.core.Wallet;
-import com.google.dogecoin.net.NioServer;
-import com.google.dogecoin.net.ProtobufParser;
-import com.google.dogecoin.net.StreamParserFactory;
+import com.google.monacoin.core.Sha256Hash;
+import com.google.monacoin.core.TransactionBroadcaster;
+import com.google.monacoin.core.Wallet;
+import com.google.monacoin.net.NioServer;
+import com.google.monacoin.net.ProtobufParser;
+import com.google.monacoin.net.StreamParserFactory;
 import org.bitcoin.paymentchannel.Protos;
 
 import javax.annotation.Nullable;

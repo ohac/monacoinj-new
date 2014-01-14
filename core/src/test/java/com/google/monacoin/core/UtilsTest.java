@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.core;
+package com.google.monacoin.core;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigInteger;
 
-import static com.google.dogecoin.core.Utils.*;
+import static com.google.monacoin.core.Utils.*;
 import static org.junit.Assert.*;
 
 public class UtilsTest {

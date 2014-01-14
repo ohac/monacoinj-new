@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.core.utils;
+package com.google.monacoin.core.utils;
 
-import com.google.dogecoin.core.Utils;
-import com.google.dogecoin.utils.ExponentialBackoff;
+import com.google.monacoin.core.Utils;
+import com.google.monacoin.utils.ExponentialBackoff;
 
 import org.junit.Before;
 import org.junit.Test;

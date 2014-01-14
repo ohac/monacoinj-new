@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.examples;
+package com.google.monacoin.examples;
 
-import com.google.dogecoin.core.*;
-import com.google.dogecoin.params.MainNetParams;
-import com.google.dogecoin.store.MemoryBlockStore;
+import com.google.monacoin.core.*;
+import com.google.monacoin.params.MainNetParams;
+import com.google.monacoin.store.MemoryBlockStore;
 
 import java.math.BigInteger;
 import java.net.InetAddress;

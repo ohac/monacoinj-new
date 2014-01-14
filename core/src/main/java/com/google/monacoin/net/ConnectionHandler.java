@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.net;
+package com.google.monacoin.net;
 
-import com.google.dogecoin.core.Message;
-import com.google.dogecoin.utils.Threading;
+import com.google.monacoin.core.Message;
+import com.google.monacoin.utils.Threading;
 import com.google.common.base.Throwables;
 import org.slf4j.LoggerFactory;
 

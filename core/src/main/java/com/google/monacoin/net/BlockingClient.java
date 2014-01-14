@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.net;
+package com.google.monacoin.net;
 
 import org.slf4j.LoggerFactory;
 

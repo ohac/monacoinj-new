@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.wallet;
+package com.google.monacoin.wallet;
 
-import com.google.dogecoin.core.Transaction;
-import com.google.dogecoin.core.TransactionConfidence;
-import com.google.dogecoin.core.Wallet;
+import com.google.monacoin.core.Transaction;
+import com.google.monacoin.core.TransactionConfidence;
+import com.google.monacoin.core.Wallet;
 
 import javax.annotation.Nullable;
 import java.util.List;

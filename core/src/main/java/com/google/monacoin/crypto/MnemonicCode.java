@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.crypto;
+package com.google.monacoin.crypto;
 
-import com.google.dogecoin.core.Sha256Hash;
+import com.google.monacoin.core.Sha256Hash;
 import com.google.common.base.Joiner;
 import org.spongycastle.util.encoders.Hex;
 

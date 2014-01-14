@@ -1,14 +1,14 @@
 import java.io.File;
 
-import com.google.dogecoin.core.AbstractPeerEventListener;
-import com.google.dogecoin.core.Block;
-import com.google.dogecoin.core.ECKey;
-import com.google.dogecoin.core.Message;
-import com.google.dogecoin.core.NetworkParameters;
-import com.google.dogecoin.core.Peer;
-import com.google.dogecoin.kits.WalletAppKit;
-import com.google.dogecoin.params.MainNetParams;
-import com.google.dogecoin.utils.Threading;
+import com.google.monacoin.core.AbstractPeerEventListener;
+import com.google.monacoin.core.Block;
+import com.google.monacoin.core.ECKey;
+import com.google.monacoin.core.Message;
+import com.google.monacoin.core.NetworkParameters;
+import com.google.monacoin.core.Peer;
+import com.google.monacoin.kits.WalletAppKit;
+import com.google.monacoin.params.MainNetParams;
+import com.google.monacoin.utils.Threading;
 
 
 public class TestWallet {
@@ -22,7 +22,7 @@ public class TestWallet {
 	public void run() throws Exception {
 		NetworkParameters params = MainNetParams.get();
 		
-		appKit = new WalletAppKit(params, new File("."), "dogecoins") {
+		appKit = new WalletAppKit(params, new File("."), "monacoins") {
 			@Override
 			protected void onSetupCompleted() {
 				if (wallet().getKeychainSize() < 1) {

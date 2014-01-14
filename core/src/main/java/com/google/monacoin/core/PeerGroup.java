@@ -15,20 +15,20 @@
  */
 
 
-package com.google.dogecoin.core;
+package com.google.monacoin.core;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Sets;
 import com.google.common.util.concurrent.*;
-import com.google.dogecoin.net.ClientConnectionManager;
-import com.google.dogecoin.net.NioClientManager;
-import com.google.dogecoin.net.discovery.PeerDiscovery;
-import com.google.dogecoin.net.discovery.PeerDiscoveryException;
-import com.google.dogecoin.params.MainNetParams;
-import com.google.dogecoin.script.Script;
-import com.google.dogecoin.utils.ExponentialBackoff;
-import com.google.dogecoin.utils.ListenerRegistration;
-import com.google.dogecoin.utils.Threading;
+import com.google.monacoin.net.ClientConnectionManager;
+import com.google.monacoin.net.NioClientManager;
+import com.google.monacoin.net.discovery.PeerDiscovery;
+import com.google.monacoin.net.discovery.PeerDiscoveryException;
+import com.google.monacoin.params.MainNetParams;
+import com.google.monacoin.script.Script;
+import com.google.monacoin.utils.ExponentialBackoff;
+import com.google.monacoin.utils.ListenerRegistration;
+import com.google.monacoin.utils.Threading;
 import net.jcip.annotations.GuardedBy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -719,7 +719,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
             // Now adjust the earliest key time backwards by 3 days to handle the case of clock drift. This can occur
             // both in block header timestamps and if the users clock was out of sync when the key was first created
             // (to within a small amount of tolerance).
-            earliestKeyTimeSecs -= 86400 * 3; //TODO DOGE is still young, we can make it higher later. Makes blockchain sync way faster for new users.
+            earliestKeyTimeSecs -= 86400 * 3; //TODO MONA is still young, we can make it higher later. Makes blockchain sync way faster for new users.
 
             // Do this last so that bloomFilter is already set when it gets called.
             setFastCatchupTimeSecs(earliestKeyTimeSecs);
@@ -761,7 +761,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
      * 
      * @param address destination IP and port.
      * @return The newly created Peer object or null if the peer could not be connected.
-     *         Use {@link com.google.dogecoin.core.Peer#getConnectionOpenFuture()} if you
+     *         Use {@link com.google.monacoin.core.Peer#getConnectionOpenFuture()} if you
      *         want a future which completes when the connection is open.
      */
     @Nullable
@@ -1108,7 +1108,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Returns a future that is triggered when the number of connected peers is equal to the given number of connected
-     * peers. By using this with {@link com.google.dogecoin.core.PeerGroup#getMaxConnections()} you can wait until the
+     * peers. By using this with {@link com.google.monacoin.core.PeerGroup#getMaxConnections()} you can wait until the
      * network is fully online. To block immediately, just call get() on the result.
      *
      * @param numPeers How many peers to wait for.
@@ -1140,7 +1140,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
      * enough, {@link PeerGroup#broadcastTransaction(Transaction)} will wait until the minimum number is reached so
      * propagation across the network can be observed. If no value has been set using
      * {@link PeerGroup#setMinBroadcastConnections(int)} a default of half of whatever
-     * {@link com.google.dogecoin.core.PeerGroup#getMaxConnections()} returns is used.
+     * {@link com.google.monacoin.core.PeerGroup#getMaxConnections()} returns is used.
      */
     public int getMinBroadcastConnections() {
         lock.lock();
@@ -1159,7 +1159,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
     }
 
     /**
-     * See {@link com.google.dogecoin.core.PeerGroup#getMinBroadcastConnections()}.
+     * See {@link com.google.monacoin.core.PeerGroup#getMinBroadcastConnections()}.
      */
     public void setMinBroadcastConnections(int value) {
         lock.lock();
@@ -1232,7 +1232,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Returns the period between pings for an individual peer. Setting this lower means more accurate and timely ping
-     * times are available via {@link com.google.dogecoin.core.Peer#getLastPingTime()} but it increases load on the
+     * times are available via {@link com.google.monacoin.core.Peer#getLastPingTime()} but it increases load on the
      * remote node. It defaults to 5000.
      */
     public long getPingIntervalMsec() {
@@ -1246,10 +1246,10 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
 
     /**
      * Sets the period between pings for an individual peer. Setting this lower means more accurate and timely ping
-     * times are available via {@link com.google.dogecoin.core.Peer#getLastPingTime()} but it increases load on the
+     * times are available via {@link com.google.monacoin.core.Peer#getLastPingTime()} but it increases load on the
      * remote node. It defaults to {@link PeerGroup#DEFAULT_PING_INTERVAL_MSEC}.
      * Setting the value to be <= 0 disables pinging entirely, although you can still request one yourself
-     * using {@link com.google.dogecoin.core.Peer#ping()}.
+     * using {@link com.google.monacoin.core.Peer#ping()}.
      */
     public void setPingIntervalMsec(long pingIntervalMsec) {
         lock.lock();

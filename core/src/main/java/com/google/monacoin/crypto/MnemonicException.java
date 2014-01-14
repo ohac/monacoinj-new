@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.crypto;
+package com.google.monacoin.crypto;
 
 /**
  * Exceptions thrown by the MnemonicCode module.

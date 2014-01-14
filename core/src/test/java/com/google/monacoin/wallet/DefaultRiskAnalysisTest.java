@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.wallet;
+package com.google.monacoin.wallet;
 
-import com.google.dogecoin.core.*;
-import com.google.dogecoin.params.UnitTestParams;
+import com.google.monacoin.core.*;
+import com.google.monacoin.params.UnitTestParams;
 import com.google.common.collect.ImmutableList;
 import org.junit.Before;
 import org.junit.Test;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.protocols.channels;
+package com.google.monacoin.protocols.channels;
 
-import com.google.dogecoin.core.ECKey;
-import com.google.dogecoin.core.InsufficientMoneyException;
-import com.google.dogecoin.core.Sha256Hash;
-import com.google.dogecoin.core.Wallet;
-import com.google.dogecoin.net.NioClient;
-import com.google.dogecoin.net.ProtobufParser;
+import com.google.monacoin.core.ECKey;
+import com.google.monacoin.core.InsufficientMoneyException;
+import com.google.monacoin.core.Sha256Hash;
+import com.google.monacoin.core.Wallet;
+import com.google.monacoin.net.NioClient;
+import com.google.monacoin.net.ProtobufParser;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
 import org.bitcoin.paymentchannel.Protos;

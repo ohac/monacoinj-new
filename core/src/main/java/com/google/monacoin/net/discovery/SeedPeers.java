@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.dogecoin.net.discovery;
+package com.google.monacoin.net.discovery;
 
-import com.google.dogecoin.core.NetworkParameters;
+import com.google.monacoin.core.NetworkParameters;
 
 import javax.annotation.Nullable;
 import java.net.InetAddress;

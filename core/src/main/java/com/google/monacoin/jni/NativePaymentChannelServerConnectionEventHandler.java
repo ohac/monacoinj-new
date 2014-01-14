@@ -1,8 +1,8 @@
-package com.google.dogecoin.jni;
+package com.google.monacoin.jni;
 
-import com.google.dogecoin.core.*;
-import com.google.dogecoin.protocols.channels.PaymentChannelCloseException;
-import com.google.dogecoin.protocols.channels.ServerConnectionEventHandler;
+import com.google.monacoin.core.*;
+import com.google.monacoin.protocols.channels.PaymentChannelCloseException;
+import com.google.monacoin.protocols.channels.ServerConnectionEventHandler;
 
 import java.math.BigInteger;
 

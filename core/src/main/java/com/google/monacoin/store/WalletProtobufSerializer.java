@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.store;
+package com.google.monacoin.store;
 
-import com.google.dogecoin.core.*;
-import com.google.dogecoin.core.TransactionConfidence.ConfidenceType;
-import com.google.dogecoin.crypto.EncryptedPrivateKey;
-import com.google.dogecoin.crypto.KeyCrypter;
-import com.google.dogecoin.crypto.KeyCrypterScrypt;
-import com.google.dogecoin.script.Script;
-import com.google.dogecoin.wallet.WalletTransaction;
+import com.google.monacoin.core.*;
+import com.google.monacoin.core.TransactionConfidence.ConfidenceType;
+import com.google.monacoin.crypto.EncryptedPrivateKey;
+import com.google.monacoin.crypto.KeyCrypter;
+import com.google.monacoin.crypto.KeyCrypterScrypt;
+import com.google.monacoin.script.Script;
+import com.google.monacoin.wallet.WalletTransaction;
 import com.google.common.collect.Lists;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.TextFormat;

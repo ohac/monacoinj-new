@@ -15,10 +15,10 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.script;
+package com.google.monacoin.script;
 
-import com.google.dogecoin.core.*;
-import com.google.dogecoin.crypto.TransactionSignature;
+import com.google.monacoin.core.*;
+import com.google.monacoin.crypto.TransactionSignature;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,8 +33,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
-import static com.google.dogecoin.script.ScriptOpCodes.*;
-import static com.google.dogecoin.core.Utils.bytesToHexString;
+import static com.google.monacoin.script.ScriptOpCodes.*;
+import static com.google.monacoin.core.Utils.bytesToHexString;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkState;
 

@@ -1,6 +1,6 @@
-package com.google.dogecoin.wallet;
+package com.google.monacoin.wallet;
 
-import com.google.dogecoin.core.TransactionOutput;
+import com.google.monacoin.core.TransactionOutput;
 
 import java.math.BigInteger;
 import java.util.LinkedList;

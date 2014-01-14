@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.examples;
+package com.google.monacoin.examples;
 
-import com.google.dogecoin.core.AbstractPeerEventListener;
-import com.google.dogecoin.core.NetworkParameters;
-import com.google.dogecoin.core.Peer;
-import com.google.dogecoin.core.PeerAddress;
-import com.google.dogecoin.core.VersionMessage;
-import com.google.dogecoin.net.discovery.DnsDiscovery;
-import com.google.dogecoin.net.discovery.PeerDiscoveryException;
-import com.google.dogecoin.net.NioClientManager;
-import com.google.dogecoin.params.MainNetParams;
-import com.google.dogecoin.utils.BriefLogFormatter;
+import com.google.monacoin.core.AbstractPeerEventListener;
+import com.google.monacoin.core.NetworkParameters;
+import com.google.monacoin.core.Peer;
+import com.google.monacoin.core.PeerAddress;
+import com.google.monacoin.core.VersionMessage;
+import com.google.monacoin.net.discovery.DnsDiscovery;
+import com.google.monacoin.net.discovery.PeerDiscoveryException;
+import com.google.monacoin.net.NioClientManager;
+import com.google.monacoin.params.MainNetParams;
+import com.google.monacoin.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;

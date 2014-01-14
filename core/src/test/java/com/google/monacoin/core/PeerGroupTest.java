@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.core;
+package com.google.monacoin.core;
 
-import com.google.dogecoin.net.discovery.PeerDiscovery;
-import com.google.dogecoin.net.discovery.PeerDiscoveryException;
-import com.google.dogecoin.params.UnitTestParams;
-import com.google.dogecoin.store.MemoryBlockStore;
-import com.google.dogecoin.utils.TestUtils;
-import com.google.dogecoin.utils.Threading;
+import com.google.monacoin.net.discovery.PeerDiscovery;
+import com.google.monacoin.net.discovery.PeerDiscoveryException;
+import com.google.monacoin.params.UnitTestParams;
+import com.google.monacoin.store.MemoryBlockStore;
+import com.google.monacoin.utils.TestUtils;
+import com.google.monacoin.utils.Threading;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.SettableFuture;
 import org.junit.After;

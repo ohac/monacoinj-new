@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.core;
+package com.google.monacoin.core;
 
-import com.google.dogecoin.params.MainNetParams;
-import com.google.dogecoin.params.TestNet3Params;
-import com.google.dogecoin.script.ScriptBuilder;
+import com.google.monacoin.params.MainNetParams;
+import com.google.monacoin.params.TestNet3Params;
+import com.google.monacoin.script.ScriptBuilder;
 import org.junit.Test;
 import org.spongycastle.util.encoders.Hex;
 
@@ -94,7 +94,7 @@ public class AddressTest {
         assertEquals(TestNet3Params.get().getId(), params.getId());*/
     }
     
-/*    @Test //Doge doesn't have this.
+/*    @Test //Mona doesn't have this.
     public void p2shAddress() throws Exception {
         // Test that we can construct P2SH addresses
         Address mainNetP2SHAddress = new Address(MainNetParams.get(), "35b9vsyH1KoFT5a5KtrKusaCcPLkiSo1tU");

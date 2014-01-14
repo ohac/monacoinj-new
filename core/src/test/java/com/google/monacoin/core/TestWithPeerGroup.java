@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.dogecoin.core;
+package com.google.monacoin.core;
 
-import com.google.dogecoin.params.UnitTestParams;
-import com.google.dogecoin.net.BlockingClientManager;
-import com.google.dogecoin.net.NioClientManager;
-import com.google.dogecoin.store.BlockStore;
-import com.google.dogecoin.utils.ExponentialBackoff;
+import com.google.monacoin.params.UnitTestParams;
+import com.google.monacoin.net.BlockingClientManager;
+import com.google.monacoin.net.NioClientManager;
+import com.google.monacoin.store.BlockStore;
+import com.google.monacoin.utils.ExponentialBackoff;
 import com.google.common.base.Preconditions;
 
 import java.net.InetSocketAddress;
