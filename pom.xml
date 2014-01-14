@@ -15,7 +15,7 @@
 
   <name>monacoinj Parent</name>
   <description>Provides the common configuration for the Monacoinj modules</description>
-  <url>https://github.com/langerhans/monacoinj-new</url>
+  <url>https://github.com/keystore00/monacoinj-new</url>
 
   <licenses>
     <license>
@@ -28,7 +28,7 @@
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/langerhans/monacoinj-new/issues</url>
+    <url>https://github.com/keystore00/monacoinj-new/issues</url>
   </issueManagement>
 
 <!--  <mailingLists>
@@ -41,12 +41,12 @@
   <distributionManagement>
     <repository>
         <id>monacoinj-distribution</id>
-        <url>https://github.com/langerhans/monacoinj-new</url>
+        <url>https://github.com/keystore00/monacoinj-new</url>
     </repository>
   </distributionManagement>
 
   <scm>
-    <url>https://github.com/langerhans/monacoinj-new</url>
+    <url>https://github.com/keystore00/monacoinj-new</url>
   </scm>
 
   <!-- Common build plugin configuration -->

@@ -30,21 +30,21 @@ public class MainNetParams extends NetworkParameters {
         interval = INTERVAL;
         targetTimespan = TARGET_TIMESPAN;
         proofOfWorkLimit = Utils.decodeCompactBits(0x1e0fffffL);
-        dumpedPrivateKeyHeader = 158; //This is always addressHeader + 128
-        addressHeader = 30;
+        dumpedPrivateKeyHeader = 178; //This is always addressHeader + 128
+        addressHeader = 50;
         //p2shHeader = 5; //We don't have this
         acceptableAddressCodes = new int[] { addressHeader };
-        port = 22556;
-        packetMagic = 0xc0c0c0c0;
+        port = 9401;
+        packetMagic = 0xfbc0b6db;
         genesisBlock.setDifficultyTarget(0x1e0ffff0L);
-        genesisBlock.setTime(1386325540L);
-        genesisBlock.setNonce(99943L);
+        genesisBlock.setTime(1388479472L);
+        genesisBlock.setNonce(1234534L);
         id = ID_MAINNET;
-        subsidyDecreaseBlockCount = 100000;
+        subsidyDecreaseBlockCount = 1051200;
         spendableCoinbaseDepth = 100;
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"),
-                genesisHash);
+        checkState(genesisHash.equals("ff9f1c0116d19de7c9963845e129f9ed1bfc0b376eb54fd7afa42e0d418c8bb6"),
+                genesisBlock);
 
         // This contains (at a minimum) the blocks which are not BIP30 compliant. BIP30 changed how duplicate
         // transactions are handled. Duplicated transactions could occur in the case where a coinbase had the same
@@ -58,10 +58,7 @@ public class MainNetParams extends NetworkParameters {
         //TODO Get actual Monacoin checkpoints
 
         dnsSeeds = new String[] {
-                /*"seed.bitcoin.sipa.be",        // Pieter Wuille
-                "dnsseed.bluematt.me",         // Matt Corallo
-                "dnsseed.bitcoin.dashjr.org",  // Luke Dashjr*/
-                "seed.monaftw.com",
+	    "dnsseed.monacoin.org"
                 //TODO Add more...
         };
     }
