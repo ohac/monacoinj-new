@@ -315,6 +315,9 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
             } else if (!temp.renameTo(destFile)) {
                 throw new IOException("Failed to rename " + temp + " to " + destFile);
             }
+        } catch (RuntimeException e) {
+            log.error("Failed whilst saving wallet", e);
+            throw e;
         } finally {
             lock.unlock();
             if (stream != null) {
@@ -1338,7 +1341,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
         }
         // This is safe even if the listener has been added before, as TransactionConfidence ignores duplicate
         // registration requests. That makes the code in the wallet simpler.
-        tx.getConfidence().addEventListener(txConfidenceListener);
+        tx.getConfidence().addEventListener(txConfidenceListener, Threading.SAME_THREAD);
     }
 
     /**
@@ -1853,6 +1856,8 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
                 bestCoinSelection = selector.select(NetworkParameters.MAX_MONEY, candidates);
                 req.tx.getOutput(0).setValue(bestCoinSelection.valueGathered);
                 totalOutput = bestCoinSelection.valueGathered;
+                if (totalOutput.compareTo(BigInteger.valueOf(2)) < 0)
+                    throw new InsufficientMoneyException(totalOutput.subtract(BigInteger.valueOf(2)), "Can't spend this due to fee.");
             }
 
             for (TransactionOutput output : bestCoinSelection.gathered)
@@ -1864,6 +1869,13 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
                 Transaction tx = req.tx;
                 if (!adjustOutputDownwardsForFee(tx, bestCoinSelection, baseFee, feePerKb))
                     throw new InsufficientMoneyException.CouldNotAdjustDownwards();
+
+                //Set total output again after we reduced it by the fee. There are 3 cases here at emptying:
+                //1: Balance is >= 2: The fee will be 1 (or more if the size of the tx is bigger.
+                //2: Balance is >= 1 but < 2: The fee will be 1, but the output will be below 1 so additional fee is needed, which we don't have.
+                //3: Balance is > 0 but < 1: We can never spend this due to fee.
+                //4: Balance is 0: This won't happen here.
+                totalOutput = tx.getOutput(0).getValue();
             }
 
             totalInput = totalInput.add(bestCoinSelection.valueGathered);
@@ -1914,7 +1926,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
         BigInteger fee = baseFee.add(BigInteger.valueOf((size / 1000) + 1).multiply(feePerKb));
         output.setValue(output.getValue().subtract(fee));
         // Check if we need additional fee due to the output's value
-        if (output.getValue().compareTo(Utils.CENT) < 0 && fee.compareTo(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE) < 0)
+        if (output.getValue().compareTo(Utils.COIN) < 0 && fee.compareTo(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE) < 0)
             output.setValue(output.getValue().subtract(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE.subtract(fee)));
         return output.getMinNonDustValue().compareTo(output.getValue()) <= 0;
     }
@@ -3228,12 +3240,16 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
     private void queueOnTransactionConfidenceChanged(final Transaction tx) {
         checkState(lock.isHeldByCurrentThread());
         for (final ListenerRegistration<WalletEventListener> registration : eventListeners) {
-            registration.executor.execute(new Runnable() {
-                @Override
-                public void run() {
-                    registration.listener.onTransactionConfidenceChanged(Wallet.this, tx);
-                }
-            });
+            if (registration.executor == Threading.SAME_THREAD) {
+                registration.listener.onTransactionConfidenceChanged(this, tx);
+            } else {
+                registration.executor.execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        registration.listener.onTransactionConfidenceChanged(Wallet.this, tx);
+                    }
+                });
+            }
         }
     }
 
@@ -3328,7 +3344,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
             checkState(lock.isHeldByCurrentThread());
             // There are 3 possibilities for what adding change might do:
             // 1) No effect
-            // 2) Causes increase in fee (change < 0.01 COINS)
+            // 2) Causes increase in fee (change < 1 COIN)
             // 3) Causes the transaction to have a dust output or change < fee increase (ie change will be thrown away)
             // If we get either of the last 2, we keep note of what the inputs looked like at the time and try to
             // add inputs as we go up the list (keeping track of minimum inputs for each category).  At the end, we pick
@@ -3388,9 +3404,8 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
                 if (additionalValueSelected != null)
                     change = change.add(additionalValueSelected);
 
-                // If change is < 0.01 BTC, we will need to have at least minfee to be accepted by the network
-                if (req.ensureMinRequiredFee && !change.equals(BigInteger.ZERO) &&
-                        change.compareTo(Utils.COIN) < 0 && fees.compareTo(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE) < 0) {
+                // If change is < 1 DOGE, we will need to have at least minfee to be accepted by the network
+                if (req.ensureMinRequiredFee && !change.equals(BigInteger.ZERO) && change.compareTo(Utils.COIN) < 0) {
                     // This solution may fit into category 2, but it may also be category 3, we'll check that later
                     eitherCategory2Or3 = true;
                     additionalValueForNextCategory = Utils.COIN;
@@ -3409,8 +3424,9 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
                         changeAddress = getChangeAddress();
                     changeOutput = new TransactionOutput(params, req.tx, change, changeAddress);
                     // If the change output would result in this transaction being rejected as dust, just drop the change and make it a fee
-                    if (req.ensureMinRequiredFee && Transaction.MIN_NONDUST_OUTPUT.compareTo(change) >= 0) {
+                    if (req.ensureMinRequiredFee && BigInteger.valueOf(100000000).compareTo(change) > 0) {
                         // This solution definitely fits in category 3
+                        //Throw away change lower than 1 DOGE as this is cheaper than paying the 1 DOGE fee.
                         isCategory3 = true;
                         //additionalValueForNextCategory = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE.add(
                         //                                 Transaction.MIN_NONDUST_OUTPUT.add(BigInteger.ONE));
@@ -3556,6 +3572,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
      * optimise itself to reduce fees or improve privacy.</p>
      */
     public void setTransactionBroadcaster(@Nullable com.google.monacoin.core.TransactionBroadcaster broadcaster) {
+        Transaction[] toBroadcast = {};
         lock.lock();
         try {
             if (vTransactionBroadcaster == broadcaster)
@@ -3563,18 +3580,21 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
             vTransactionBroadcaster = broadcaster;
             if (broadcaster == null)
                 return;
-            // Now use it to upload any pending transactions we have that are marked as not being seen by any peers yet.
-            for (Transaction tx : pending.values()) {
-                checkState(tx.getConfidence().getConfidenceType() == ConfidenceType.PENDING);
-                // Re-broadcast even if it's marked as already seen for two reasons
-                // 1) Old wallets may have transactions marked as broadcast by 1 peer when in reality the network
-                //    never saw it, due to bugs.
-                // 2) It can't really hurt.
-                log.info("New broadcaster so uploading waiting tx {}", tx.getHash());
-                broadcaster.broadcastTransaction(tx);
-            }
+            toBroadcast = pending.values().toArray(toBroadcast);
         } finally {
             lock.unlock();
+        }
+        // Now use it to upload any pending transactions we have that are marked as not being seen by any peers yet.
+        // Don't hold the wallet lock whilst doing this, so if the broadcaster accesses the wallet at some point there
+        // is no inversion.
+        for (Transaction tx : toBroadcast) {
+            checkState(tx.getConfidence().getConfidenceType() == ConfidenceType.PENDING);
+            // Re-broadcast even if it's marked as already seen for two reasons
+            // 1) Old wallets may have transactions marked as broadcast by 1 peer when in reality the network
+            //    never saw it, due to bugs.
+            // 2) It can't really hurt.
+            log.info("New broadcaster so uploading waiting tx {}", tx.getHash());
+            broadcaster.broadcastTransaction(tx);
         }
     }
 
