@@ -71,7 +71,7 @@ public class Transaction extends ChildMessage implements Serializable {
      * This is calculated by assuming a standard output will be 34 bytes, and then using the formula used in
      * {@link TransactionOutput#getMinNonDustValue(BigInteger)}. Currently it's 5460 satoshis.
      */
-    public static final BigInteger MIN_NONDUST_OUTPUT = BigInteger.ONE; //MONA: We can send one "shibetoshi" but this will cost us extra fee!
+    public static final BigInteger MIN_NONDUST_OUTPUT = BigInteger.valueOf(100000); //MONA: We can send one "shibetoshi" but this will cost us extra fee!
 
     // These are serialized in both monacoin and java serialization.
     private long version;

@@ -3424,19 +3424,20 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
                         changeAddress = getChangeAddress();
                     changeOutput = new TransactionOutput(params, req.tx, change, changeAddress);
                     // If the change output would result in this transaction being rejected as dust, just drop the change and make it a fee
-                    if (req.ensureMinRequiredFee && BigInteger.valueOf(100000000).compareTo(change) > 0) {
+                    if (req.ensureMinRequiredFee && Transaction.MIN_NONDUST_OUTPUT.compareTo(change) > 0) {
                         // This solution definitely fits in category 3
                         //Throw away change lower than 1 DOGE as this is cheaper than paying the 1 DOGE fee.
                         isCategory3 = true;
-                        //additionalValueForNextCategory = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE.add(
-                        //                                 Transaction.MIN_NONDUST_OUTPUT.add(BigInteger.ONE));
-                        additionalValueForNextCategory = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE.add(BigInteger.ONE);
+                        additionalValueForNextCategory = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE.add(
+                                                         Transaction.MIN_NONDUST_OUTPUT.add(BigInteger.ONE));
+                        //additionalValueForNextCategory = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE.add(BigInteger.ONE);
                                                          //MONA: We don't have a min value, but we add more fees for tx < 1
                     } else {
                         size += changeOutput.bitcoinSerialize().length + VarInt.sizeOf(req.tx.getOutputs().size()) - VarInt.sizeOf(req.tx.getOutputs().size() - 1);
                         // This solution is either category 1 or 2
-                        if (!eitherCategory2Or3) // must be category 1
+                        if (!eitherCategory2Or3) {// must be category 1
                             additionalValueForNextCategory = null;
+			}
                     }
                 } else {
                     if (eitherCategory2Or3) {
@@ -3483,8 +3484,9 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
                 }
 
                 if (additionalValueForNextCategory != null) {
-                    if (additionalValueSelected != null)
+                    if (additionalValueSelected != null) {
                         checkState(additionalValueForNextCategory.compareTo(additionalValueSelected) > 0);
+		    }
                     continue;
                 }
                 break;
