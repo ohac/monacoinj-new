@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.examples;
+package com.google.sakuracoin.examples;
 
-import com.google.monacoin.core.AbstractPeerEventListener;
-import com.google.monacoin.core.NetworkParameters;
-import com.google.monacoin.core.Peer;
-import com.google.monacoin.core.PeerGroup;
-import com.google.monacoin.net.discovery.DnsDiscovery;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.core.AbstractPeerEventListener;
+import com.google.sakuracoin.core.NetworkParameters;
+import com.google.sakuracoin.core.Peer;
+import com.google.sakuracoin.core.PeerGroup;
+import com.google.sakuracoin.net.discovery.DnsDiscovery;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 
 import javax.swing.*;

@@ -1,13 +1,13 @@
 package wallettemplate;
 
 import com.aquafx_project.AquaFx;
-import com.google.monacoin.core.NetworkParameters;
-import com.google.monacoin.kits.WalletAppKit;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.params.RegTestParams;
-import com.google.monacoin.store.BlockStoreException;
-import com.google.monacoin.utils.BriefLogFormatter;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.core.NetworkParameters;
+import com.google.sakuracoin.kits.WalletAppKit;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.params.RegTestParams;
+import com.google.sakuracoin.store.BlockStoreException;
+import com.google.sakuracoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.utils.Threading;
 import com.google.common.base.Throwables;
 import javafx.application.Application;
 import javafx.application.Platform;

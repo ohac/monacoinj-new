@@ -1,9 +1,9 @@
-package com.google.monacoin.tools;
+package com.google.sakuracoin.tools;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.net.discovery.DnsDiscovery;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.net.discovery.DnsDiscovery;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.utils.BriefLogFormatter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

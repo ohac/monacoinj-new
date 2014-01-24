@@ -21,14 +21,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.google</groupId>
-        <artifactId>monacoinj-parent</artifactId>
+        <artifactId>sakuracoinj-parent</artifactId>
         <version>0.11-SNAPSHOT</version>
     </parent>
 
-    <artifactId>monacoinj</artifactId>
+    <artifactId>sakuracoinj</artifactId>
 
-    <name>monacoinj</name>
-    <description>A Java Monacoin library</description>
+    <name>sakuracoinj</name>
+    <description>A Java Sakuracoin library</description>
 
     <profiles>
         <profile>
@@ -175,7 +175,7 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
-        <!-- monacoinj consumers are expected to provide their own SLF4J adapters
+        <!-- sakuracoinj consumers are expected to provide their own SLF4J adapters
              such as logback, slf4j-log4j12, slf4j-jcl and so on
              see http://www.slf4j.org/faq.html -->
         <dependency>

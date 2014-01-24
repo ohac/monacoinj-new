@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.examples;
+package com.google.sakuracoin.examples;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.store.MemoryBlockStore;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.store.MemoryBlockStore;
 
 import java.math.BigInteger;
 import java.net.InetAddress;

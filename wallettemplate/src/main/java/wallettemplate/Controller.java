@@ -1,9 +1,9 @@
 package wallettemplate;
 
-import com.google.monacoin.core.AbstractWalletEventListener;
-import com.google.monacoin.core.DownloadListener;
-import com.google.monacoin.core.Utils;
-import com.google.monacoin.core.Wallet;
+import com.google.sakuracoin.core.AbstractWalletEventListener;
+import com.google.sakuracoin.core.DownloadListener;
+import com.google.sakuracoin.core.Utils;
+import com.google.sakuracoin.core.Wallet;
 import javafx.animation.*;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;

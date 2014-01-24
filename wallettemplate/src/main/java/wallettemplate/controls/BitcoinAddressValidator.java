@@ -1,8 +1,8 @@
 package wallettemplate.controls;
 
-import com.google.monacoin.core.Address;
-import com.google.monacoin.core.AddressFormatException;
-import com.google.monacoin.core.NetworkParameters;
+import com.google.sakuracoin.core.Address;
+import com.google.sakuracoin.core.AddressFormatException;
+import com.google.sakuracoin.core.NetworkParameters;
 import javafx.scene.Node;
 import javafx.scene.control.TextField;
 import wallettemplate.utils.TextFieldValidator;

@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.examples;
+package com.google.sakuracoin.examples;
 
-import com.google.monacoin.core.AbstractPeerEventListener;
-import com.google.monacoin.core.NetworkParameters;
-import com.google.monacoin.core.Peer;
-import com.google.monacoin.core.PeerAddress;
-import com.google.monacoin.core.VersionMessage;
-import com.google.monacoin.net.discovery.DnsDiscovery;
-import com.google.monacoin.net.discovery.PeerDiscoveryException;
-import com.google.monacoin.net.NioClientManager;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.core.AbstractPeerEventListener;
+import com.google.sakuracoin.core.NetworkParameters;
+import com.google.sakuracoin.core.Peer;
+import com.google.sakuracoin.core.PeerAddress;
+import com.google.sakuracoin.core.VersionMessage;
+import com.google.sakuracoin.net.discovery.DnsDiscovery;
+import com.google.sakuracoin.net.discovery.PeerDiscoveryException;
+import com.google.sakuracoin.net.NioClientManager;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;

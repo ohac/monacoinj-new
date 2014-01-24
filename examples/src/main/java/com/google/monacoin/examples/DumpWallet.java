@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.examples;
+package com.google.sakuracoin.examples;
 
-import com.google.monacoin.core.Wallet;
+import com.google.sakuracoin.core.Wallet;
 
 import java.io.File;
 

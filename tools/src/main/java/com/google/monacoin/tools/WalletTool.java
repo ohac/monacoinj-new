@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.tools;
+package com.google.sakuracoin.tools;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.crypto.KeyCrypterException;
-import com.google.monacoin.net.discovery.DnsDiscovery;
-import com.google.monacoin.net.discovery.PeerDiscovery;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.params.RegTestParams;
-import com.google.monacoin.params.TestNet3Params;
-import com.google.monacoin.store.*;
-import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.crypto.KeyCrypterException;
+import com.google.sakuracoin.net.discovery.DnsDiscovery;
+import com.google.sakuracoin.net.discovery.PeerDiscovery;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.params.RegTestParams;
+import com.google.sakuracoin.params.TestNet3Params;
+import com.google.sakuracoin.store.*;
+import com.google.sakuracoin.utils.BriefLogFormatter;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import joptsimple.OptionParser;

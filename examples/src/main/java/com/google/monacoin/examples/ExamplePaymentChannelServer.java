@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.examples;
+package com.google.sakuracoin.examples;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.kits.WalletAppKit;
-import com.google.monacoin.params.TestNet3Params;
-import com.google.monacoin.protocols.channels.*;
-import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.kits.WalletAppKit;
+import com.google.sakuracoin.params.TestNet3Params;
+import com.google.sakuracoin.protocols.channels.*;
+import com.google.sakuracoin.utils.BriefLogFormatter;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;

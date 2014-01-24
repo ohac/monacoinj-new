@@ -1,14 +1,14 @@
 import java.io.File;
 
-import com.google.monacoin.core.AbstractPeerEventListener;
-import com.google.monacoin.core.Block;
-import com.google.monacoin.core.ECKey;
-import com.google.monacoin.core.Message;
-import com.google.monacoin.core.NetworkParameters;
-import com.google.monacoin.core.Peer;
-import com.google.monacoin.kits.WalletAppKit;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.core.AbstractPeerEventListener;
+import com.google.sakuracoin.core.Block;
+import com.google.sakuracoin.core.ECKey;
+import com.google.sakuracoin.core.Message;
+import com.google.sakuracoin.core.NetworkParameters;
+import com.google.sakuracoin.core.Peer;
+import com.google.sakuracoin.kits.WalletAppKit;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.utils.Threading;
 
 
 public class TestWallet {
@@ -22,7 +22,7 @@ public class TestWallet {
 	public void run() throws Exception {
 		NetworkParameters params = MainNetParams.get();
 		
-		appKit = new WalletAppKit(params, new File("."), "monacoins") {
+		appKit = new WalletAppKit(params, new File("."), "sakuracoins") {
 			@Override
 			protected void onSetupCompleted() {
 				if (wallet().getKeychainSize() < 1) {

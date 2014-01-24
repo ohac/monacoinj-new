@@ -11,9 +11,9 @@ find your unzipped Maven install directory.
 Now try running one of the example apps:
 
   cd examples
-  mvn exec:java -Dexec.mainClass=com.google.monacoin.examples.ForwardingService <insert a bitcoin address here>
+  mvn exec:java -Dexec.mainClass=com.google.sakuracoin.examples.ForwardingService <insert a sakuracoin address here>
 
-It will download the block chain and eventually print a Bitcoin address. If you send coins to it,
+It will download the block chain and eventually print a Sakuracoin address. If you send coins to it,
 it will forward them on to the address you specified.
 
 Now you are ready to follow the tutorial:

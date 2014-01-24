@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.examples;
+package com.google.sakuracoin.examples;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.kits.WalletAppKit;
-import com.google.monacoin.params.TestNet3Params;
-import com.google.monacoin.protocols.channels.PaymentChannelClientConnection;
-import com.google.monacoin.protocols.channels.StoredPaymentChannelClientStates;
-import com.google.monacoin.protocols.channels.ValueOutOfRangeException;
-import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.kits.WalletAppKit;
+import com.google.sakuracoin.params.TestNet3Params;
+import com.google.sakuracoin.protocols.channels.PaymentChannelClientConnection;
+import com.google.sakuracoin.protocols.channels.StoredPaymentChannelClientStates;
+import com.google.sakuracoin.protocols.channels.ValueOutOfRangeException;
+import com.google.sakuracoin.utils.BriefLogFormatter;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -34,7 +34,7 @@ import java.math.BigInteger;
 import java.net.InetSocketAddress;
 import java.util.concurrent.CountDownLatch;
 
-import static com.google.monacoin.core.Utils.CENT;
+import static com.google.sakuracoin.core.Utils.CENT;
 import static java.math.BigInteger.TEN;
 import static java.math.BigInteger.ZERO;
 

@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.examples;
+package com.google.sakuracoin.examples;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.crypto.KeyCrypterException;
-import com.google.monacoin.kits.WalletAppKit;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.params.RegTestParams;
-import com.google.monacoin.params.TestNet3Params;
-import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.crypto.KeyCrypterException;
+import com.google.sakuracoin.kits.WalletAppKit;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.params.RegTestParams;
+import com.google.sakuracoin.params.TestNet3Params;
+import com.google.sakuracoin.utils.BriefLogFormatter;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.MoreExecutors;

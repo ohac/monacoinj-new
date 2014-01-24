@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.examples;
+package com.google.sakuracoin.examples;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.params.TestNet3Params;
-import com.google.monacoin.store.BlockStore;
-import com.google.monacoin.store.MemoryBlockStore;
-import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.params.TestNet3Params;
+import com.google.sakuracoin.store.BlockStore;
+import com.google.sakuracoin.store.MemoryBlockStore;
+import com.google.sakuracoin.utils.BriefLogFormatter;
 import com.google.common.util.concurrent.ListenableFuture;
 
 import java.net.InetAddress;

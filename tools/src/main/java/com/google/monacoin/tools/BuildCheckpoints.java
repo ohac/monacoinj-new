@@ -1,11 +1,11 @@
-package com.google.monacoin.tools;
+package com.google.sakuracoin.tools;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.store.BlockStore;
-import com.google.monacoin.store.MemoryBlockStore;
-import com.google.monacoin.utils.BriefLogFormatter;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.store.BlockStore;
+import com.google.sakuracoin.store.MemoryBlockStore;
+import com.google.sakuracoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.utils.Threading;
 
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
