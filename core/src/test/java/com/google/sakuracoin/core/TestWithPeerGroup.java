@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.net.BlockingClientManager;
-import com.google.monacoin.net.NioClientManager;
-import com.google.monacoin.store.BlockStore;
-import com.google.monacoin.utils.ExponentialBackoff;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.net.BlockingClientManager;
+import com.google.sakuracoin.net.NioClientManager;
+import com.google.sakuracoin.store.BlockStore;
+import com.google.sakuracoin.utils.ExponentialBackoff;
 import com.google.common.base.Preconditions;
 
 import java.net.InetSocketAddress;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.net.discovery.PeerDiscovery;
-import com.google.monacoin.net.discovery.PeerDiscoveryException;
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.store.MemoryBlockStore;
-import com.google.monacoin.utils.TestUtils;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.net.discovery.PeerDiscovery;
+import com.google.sakuracoin.net.discovery.PeerDiscoveryException;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.store.MemoryBlockStore;
+import com.google.sakuracoin.utils.TestUtils;
+import com.google.sakuracoin.utils.Threading;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.SettableFuture;
 import org.junit.After;

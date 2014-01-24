@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.crypto;
+package com.google.sakuracoin.crypto;
 
-import com.google.monacoin.core.Sha256Hash;
+import com.google.sakuracoin.core.Sha256Hash;
 import com.google.common.base.Joiner;
 import org.spongycastle.util.encoders.Hex;
 

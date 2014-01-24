@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.net.*;
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.store.BlockStore;
-import com.google.monacoin.store.MemoryBlockStore;
-import com.google.monacoin.utils.BriefLogFormatter;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.net.*;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.store.BlockStore;
+import com.google.sakuracoin.store.MemoryBlockStore;
+import com.google.sakuracoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.utils.Threading;
 import com.google.common.util.concurrent.SettableFuture;
 
 import javax.annotation.Nullable;

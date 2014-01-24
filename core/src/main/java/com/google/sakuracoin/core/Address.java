@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.script.Script;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.script.Script;
 
 import javax.annotation.Nullable;
 

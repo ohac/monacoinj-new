@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.store;
+package com.google.sakuracoin.store;
 
-import com.google.monacoin.core.Sha256Hash;
-import com.google.monacoin.core.StoredBlock;
+import com.google.sakuracoin.core.Sha256Hash;
+import com.google.sakuracoin.core.StoredBlock;
 
 /**
  * An implementor of BlockStore saves StoredBlock objects to disk. Different implementations store them in
@@ -45,8 +45,8 @@ public interface BlockStore {
 
     /**
      * Returns the {@link StoredBlock} that represents the top of the chain of greatest total work. Note that this
-     * can be arbitrarily expensive, you probably should use {@link com.google.monacoin.core.BlockChain#getChainHead()}
-     * or perhaps {@link com.google.monacoin.core.BlockChain#getBestChainHeight()} which will run in constant time and
+     * can be arbitrarily expensive, you probably should use {@link com.google.sakuracoin.core.BlockChain#getChainHead()}
+     * or perhaps {@link com.google.sakuracoin.core.BlockChain#getBestChainHeight()} which will run in constant time and
      * not take any heavyweight locks.
      */
     StoredBlock getChainHead() throws BlockStoreException;

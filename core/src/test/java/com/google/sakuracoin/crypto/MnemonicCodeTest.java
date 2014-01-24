@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.crypto;
+package com.google.sakuracoin.crypto;
 
 import com.google.common.base.Joiner;
 import org.junit.Before;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.protocols.channels;
+package com.google.sakuracoin.protocols.channels;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.protocols.channels.PaymentChannelCloseException.CloseReason;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.protocols.channels.PaymentChannelCloseException.CloseReason;
+import com.google.sakuracoin.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.MoreExecutors;
@@ -345,7 +345,7 @@ public class PaymentChannelClient implements IPaymentChannelClient {
      * intending to reopen the channel later. There is likely little reason to use this in a stateless protocol.</p>
      *
      * <p>Note that this <b>MUST</b> still be called even after either
-     * {@link ClientConnection#destroyConnection(com.google.monacoin.protocols.channels.PaymentChannelCloseException.CloseReason)} or
+     * {@link ClientConnection#destroyConnection(com.google.sakuracoin.protocols.channels.PaymentChannelCloseException.CloseReason)} or
      * {@link PaymentChannelClient#settle()} is called, to actually handle the connection close logic.</p>
      */
     @Override

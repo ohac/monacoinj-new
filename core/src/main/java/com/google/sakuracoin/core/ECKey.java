@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.crypto.EncryptedPrivateKey;
-import com.google.monacoin.crypto.KeyCrypter;
-import com.google.monacoin.crypto.KeyCrypterException;
-import com.google.monacoin.crypto.TransactionSignature;
+import com.google.sakuracoin.crypto.EncryptedPrivateKey;
+import com.google.sakuracoin.crypto.KeyCrypter;
+import com.google.sakuracoin.crypto.KeyCrypterException;
+import com.google.sakuracoin.crypto.TransactionSignature;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import org.bitcoin.NativeSecp256k1;
@@ -407,7 +407,7 @@ public class ECKey implements Serializable {
 
     /**
      * Signs the given hash and returns the R and S components as BigIntegers. In the Bitcoin protocol, they are
-     * usually encoded using DER format, so you want {@link com.google.monacoin.core.ECKey.ECDSASignature#toASN1()}
+     * usually encoded using DER format, so you want {@link com.google.sakuracoin.core.ECKey.ECDSASignature#toASN1()}
      * instead. However sometimes the independent components can be useful, for instance, if you're doing to do
      * further EC maths on them.
      * @throws KeyCrypterException if this ECKey doesn't have a private part.
@@ -426,7 +426,7 @@ public class ECKey implements Serializable {
 
     /**
      * Signs the given hash and returns the R and S components as BigIntegers. In the Bitcoin protocol, they are
-     * usually encoded using DER format, so you want {@link com.google.monacoin.core.ECKey.ECDSASignature#encodeToDER()}
+     * usually encoded using DER format, so you want {@link com.google.sakuracoin.core.ECKey.ECDSASignature#encodeToDER()}
      * instead. However sometimes the independent components can be useful, for instance, if you're doing to do further
      * EC maths on them.
      *
@@ -777,7 +777,7 @@ public class ECKey implements Serializable {
 
     /**
      * Exports the private key in the form used by the Satoshi client "dumpprivkey" and "importprivkey" commands. Use
-     * the {@link com.google.monacoin.core.DumpedPrivateKey#toString()} method to get the string.
+     * the {@link com.google.sakuracoin.core.DumpedPrivateKey#toString()} method to get the string.
      *
      * @param params The network this key is intended for use on.
      * @return Private key bytes as a {@link DumpedPrivateKey}.

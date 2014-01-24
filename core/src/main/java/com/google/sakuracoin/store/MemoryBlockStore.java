@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.store;
+package com.google.sakuracoin.store;
 
-import com.google.monacoin.core.*;
+import com.google.sakuracoin.core.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Keeps {@link com.google.monacoin.core.StoredBlock}s in memory. Used primarily for unit testing.
+ * Keeps {@link com.google.sakuracoin.core.StoredBlock}s in memory. Used primarily for unit testing.
  */
 public class MemoryBlockStore implements BlockStore {
     private LinkedHashMap<Sha256Hash, StoredBlock> blockMap = new LinkedHashMap<Sha256Hash, StoredBlock>() {

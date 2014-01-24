@@ -1,6 +1,6 @@
-package com.google.monacoin.crypto;
+package com.google.sakuracoin.crypto;
 
-import com.google.monacoin.core.ECKey;
+import com.google.sakuracoin.core.ECKey;
 import org.junit.Assert;
 import org.junit.Test;
 import org.slf4j.Logger;

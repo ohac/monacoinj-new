@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 /**
  * Represents the "getdata" P2P network message, which requests the contents of blocks or transactions given their

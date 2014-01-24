@@ -1,8 +1,8 @@
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.core.Transaction.SigHash;
-import com.google.monacoin.script.Script;
-import com.google.monacoin.script.ScriptBuilder;
+import com.google.sakuracoin.core.Transaction.SigHash;
+import com.google.sakuracoin.script.Script;
+import com.google.sakuracoin.script.ScriptBuilder;
 import com.google.common.base.Preconditions;
 
 import java.io.ByteArrayOutputStream;
@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.util.*;
 
-import static com.google.monacoin.script.ScriptOpCodes.*;
+import static com.google.sakuracoin.script.ScriptOpCodes.*;
 
 /**
  * Represents a block which is sent to the tested application and which the application must either reject or accept,

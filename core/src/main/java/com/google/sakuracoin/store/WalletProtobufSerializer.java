@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.store;
+package com.google.sakuracoin.store;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.core.TransactionConfidence.ConfidenceType;
-import com.google.monacoin.crypto.EncryptedPrivateKey;
-import com.google.monacoin.crypto.KeyCrypter;
-import com.google.monacoin.crypto.KeyCrypterScrypt;
-import com.google.monacoin.script.Script;
-import com.google.monacoin.wallet.WalletTransaction;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.core.TransactionConfidence.ConfidenceType;
+import com.google.sakuracoin.crypto.EncryptedPrivateKey;
+import com.google.sakuracoin.crypto.KeyCrypter;
+import com.google.sakuracoin.crypto.KeyCrypterScrypt;
+import com.google.sakuracoin.script.Script;
+import com.google.sakuracoin.wallet.WalletTransaction;
 import com.google.common.collect.Lists;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.TextFormat;

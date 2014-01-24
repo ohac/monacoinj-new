@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.protocols.channels;
+package com.google.sakuracoin.protocols.channels;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.crypto.TransactionSignature;
-import com.google.monacoin.script.Script;
-import com.google.monacoin.script.ScriptBuilder;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.crypto.TransactionSignature;
+import com.google.sakuracoin.script.Script;
+import com.google.sakuracoin.script.ScriptBuilder;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.FutureCallback;

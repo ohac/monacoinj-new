@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.crypto.EncryptedPrivateKey;
-import com.google.monacoin.crypto.KeyCrypter;
-import com.google.monacoin.crypto.KeyCrypterScrypt;
-import com.google.monacoin.crypto.TransactionSignature;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.params.TestNet3Params;
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.crypto.EncryptedPrivateKey;
+import com.google.sakuracoin.crypto.KeyCrypter;
+import com.google.sakuracoin.crypto.KeyCrypterScrypt;
+import com.google.sakuracoin.crypto.TransactionSignature;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.params.TestNet3Params;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.utils.BriefLogFormatter;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -49,7 +49,7 @@ import java.io.InputStream;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 
-import static com.google.monacoin.core.Utils.reverseBytes;
+import static com.google.sakuracoin.core.Utils.reverseBytes;
 import static org.junit.Assert.*;
 
 public class ECKeyTest {

@@ -15,11 +15,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.script;
+package com.google.sakuracoin.script;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.crypto.TransactionSignature;
-import com.google.monacoin.params.MainNetParams;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.crypto.TransactionSignature;
+import com.google.sakuracoin.params.MainNetParams;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,8 +34,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
-import static com.google.monacoin.script.ScriptOpCodes.*;
-import static com.google.monacoin.core.Utils.bytesToHexString;
+import static com.google.sakuracoin.script.ScriptOpCodes.*;
+import static com.google.sakuracoin.core.Utils.bytesToHexString;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkState;
 

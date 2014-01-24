@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.store.BlockStore;
-import com.google.monacoin.store.BlockStoreException;
+import com.google.sakuracoin.store.BlockStore;
+import com.google.sakuracoin.store.BlockStoreException;
 
 import java.io.*;
 import java.math.BigInteger;

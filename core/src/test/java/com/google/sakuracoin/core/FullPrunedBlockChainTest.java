@@ -15,15 +15,15 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.script.Script;
-import com.google.monacoin.store.FullPrunedBlockStore;
-import com.google.monacoin.store.MemoryFullPrunedBlockStore;
-import com.google.monacoin.utils.BlockFileLoader;
-import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.script.Script;
+import com.google.sakuracoin.store.FullPrunedBlockStore;
+import com.google.sakuracoin.store.MemoryFullPrunedBlockStore;
+import com.google.sakuracoin.utils.BlockFileLoader;
+import com.google.sakuracoin.utils.BriefLogFormatter;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.core.TransactionConfidence.ConfidenceType;
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.store.MemoryBlockStore;
-import com.google.monacoin.utils.BriefLogFormatter;
-import com.google.monacoin.utils.TestUtils;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.core.TransactionConfidence.ConfidenceType;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.store.MemoryBlockStore;
+import com.google.sakuracoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.utils.TestUtils;
+import com.google.sakuracoin.utils.Threading;
 import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;

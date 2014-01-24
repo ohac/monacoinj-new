@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.utils;
+package com.google.sakuracoin.utils;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

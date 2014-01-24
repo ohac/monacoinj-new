@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.params.TestNet3Params;
-import com.google.monacoin.utils.TestUtils;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.params.TestNet3Params;
+import com.google.sakuracoin.utils.TestUtils;
+import com.google.sakuracoin.utils.Threading;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
@@ -46,7 +46,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.google.monacoin.utils.TestUtils.*;
+import static com.google.sakuracoin.utils.TestUtils.*;
 import static org.junit.Assert.*;
 
 @RunWith(value = Parameterized.class)

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.crypto;
+package com.google.sakuracoin.crypto;
 
-import com.google.monacoin.core.ECKey;
+import com.google.sakuracoin.core.ECKey;
 import com.google.common.collect.ImmutableList;
 import org.spongycastle.crypto.digests.SHA512Digest;
 import org.spongycastle.crypto.macs.HMac;

@@ -1,16 +1,16 @@
-package com.google.monacoin.wallet;
+package com.google.sakuracoin.wallet;
 
-import com.google.monacoin.core.NetworkParameters;
-import com.google.monacoin.core.Transaction;
-import com.google.monacoin.core.TransactionConfidence;
-import com.google.monacoin.core.TransactionOutput;
+import com.google.sakuracoin.core.NetworkParameters;
+import com.google.sakuracoin.core.Transaction;
+import com.google.sakuracoin.core.TransactionConfidence;
+import com.google.sakuracoin.core.TransactionOutput;
 import com.google.common.annotations.VisibleForTesting;
 
 import java.math.BigInteger;
 import java.util.*;
 
 /**
- * This class implements a {@link com.google.monacoin.wallet.CoinSelector} which attempts to get the highest priority
+ * This class implements a {@link com.google.sakuracoin.wallet.CoinSelector} which attempts to get the highest priority
  * possible. This means that the transaction is the most likely to get confirmed. Note that this means we may end up
  * "spending" more priority than would be required to get the transaction we are creating confirmed.
  */

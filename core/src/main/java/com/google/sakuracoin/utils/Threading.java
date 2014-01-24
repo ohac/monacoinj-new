@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.utils;
+package com.google.sakuracoin.utils;
 
 import com.google.common.util.concurrent.CycleDetectingLockFactory;
 import com.google.common.util.concurrent.Uninterruptibles;

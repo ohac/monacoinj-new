@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.net;
+package com.google.sakuracoin.net;
 
 import com.google.common.util.concurrent.AbstractIdleService;
 

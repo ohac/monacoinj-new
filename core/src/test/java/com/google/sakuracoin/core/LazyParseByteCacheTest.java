@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.store.BlockStore;
-import com.google.monacoin.store.MemoryBlockStore;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.store.BlockStore;
+import com.google.sakuracoin.store.MemoryBlockStore;
 import org.junit.Before;
 import org.junit.Test;
 import org.spongycastle.util.encoders.Hex;
@@ -28,8 +28,8 @@ import java.io.ByteArrayOutputStream;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-import static com.google.monacoin.utils.TestUtils.createFakeBlock;
-import static com.google.monacoin.utils.TestUtils.createFakeTx;
+import static com.google.sakuracoin.utils.TestUtils.createFakeBlock;
+import static com.google.sakuracoin.utils.TestUtils.createFakeTx;
 import static org.junit.Assert.*;
 
 public class LazyParseByteCacheTest {

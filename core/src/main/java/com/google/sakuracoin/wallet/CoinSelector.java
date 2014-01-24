@@ -1,6 +1,6 @@
-package com.google.monacoin.wallet;
+package com.google.sakuracoin.wallet;
 
-import com.google.monacoin.core.TransactionOutput;
+import com.google.sakuracoin.core.TransactionOutput;
 
 import java.math.BigInteger;
 import java.util.LinkedList;

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.script;
+package com.google.sakuracoin.script;
 
-import com.google.monacoin.core.Utils;
+import com.google.sakuracoin.core.Utils;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Arrays;
 
-import static com.google.monacoin.script.ScriptOpCodes.OP_PUSHDATA1;
-import static com.google.monacoin.script.ScriptOpCodes.OP_PUSHDATA2;
-import static com.google.monacoin.script.ScriptOpCodes.OP_PUSHDATA4;
+import static com.google.sakuracoin.script.ScriptOpCodes.OP_PUSHDATA1;
+import static com.google.sakuracoin.script.ScriptOpCodes.OP_PUSHDATA2;
+import static com.google.sakuracoin.script.ScriptOpCodes.OP_PUSHDATA4;
 import static com.google.common.base.Preconditions.checkState;
 
 /**

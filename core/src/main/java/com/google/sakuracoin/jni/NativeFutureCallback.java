@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.jni;
+package com.google.sakuracoin.jni;
 
 import com.google.common.util.concurrent.FutureCallback;
 

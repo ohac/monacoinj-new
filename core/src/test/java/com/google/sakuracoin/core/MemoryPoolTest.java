@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.utils.BriefLogFormatter;
-import com.google.monacoin.utils.TestUtils;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.utils.TestUtils;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.net;
+package com.google.sakuracoin.net;
 
-import com.google.monacoin.core.Message;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.core.Message;
+import com.google.sakuracoin.utils.Threading;
 import com.google.common.base.Throwables;
 import org.slf4j.LoggerFactory;
 

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.wallet;
+package com.google.sakuracoin.wallet;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.utils.TestUtils;
-import com.google.monacoin.utils.TestWithWallet;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.utils.TestUtils;
+import com.google.sakuracoin.utils.TestWithWallet;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

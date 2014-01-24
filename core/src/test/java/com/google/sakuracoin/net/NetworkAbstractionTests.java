@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.net;
+package com.google.sakuracoin.net;
 
-import com.google.monacoin.core.Utils;
+import com.google.sakuracoin.core.Utils;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
 import org.bitcoin.paymentchannel.Protos;

@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.core.Transaction.SigHash;
-import com.google.monacoin.core.Wallet.SendRequest;
-import com.google.monacoin.wallet.WalletTransaction;
-import com.google.monacoin.wallet.WalletTransaction.Pool;
-import com.google.monacoin.crypto.KeyCrypter;
-import com.google.monacoin.crypto.KeyCrypterException;
-import com.google.monacoin.crypto.KeyCrypterScrypt;
-import com.google.monacoin.crypto.TransactionSignature;
-import com.google.monacoin.store.WalletProtobufSerializer;
-import com.google.monacoin.utils.MockTransactionBroadcaster;
-import com.google.monacoin.utils.TestUtils;
-import com.google.monacoin.utils.TestWithWallet;
-import com.google.monacoin.utils.Threading;
-import com.google.monacoin.wallet.KeyTimeCoinSelector;
-import com.google.monacoin.wallet.WalletFiles;
+import com.google.sakuracoin.core.Transaction.SigHash;
+import com.google.sakuracoin.core.Wallet.SendRequest;
+import com.google.sakuracoin.wallet.WalletTransaction;
+import com.google.sakuracoin.wallet.WalletTransaction.Pool;
+import com.google.sakuracoin.crypto.KeyCrypter;
+import com.google.sakuracoin.crypto.KeyCrypterException;
+import com.google.sakuracoin.crypto.KeyCrypterScrypt;
+import com.google.sakuracoin.crypto.TransactionSignature;
+import com.google.sakuracoin.store.WalletProtobufSerializer;
+import com.google.sakuracoin.utils.MockTransactionBroadcaster;
+import com.google.sakuracoin.utils.TestUtils;
+import com.google.sakuracoin.utils.TestWithWallet;
+import com.google.sakuracoin.utils.Threading;
+import com.google.sakuracoin.wallet.KeyTimeCoinSelector;
+import com.google.sakuracoin.wallet.WalletFiles;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.protobuf.ByteString;
@@ -55,8 +55,8 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.google.monacoin.utils.TestUtils.*;
-import static com.google.monacoin.core.Utils.*;
+import static com.google.sakuracoin.utils.TestUtils.*;
+import static com.google.sakuracoin.core.Utils.*;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.junit.Assert.*;
 

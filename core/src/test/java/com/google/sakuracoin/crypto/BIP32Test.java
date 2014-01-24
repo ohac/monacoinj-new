@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.crypto;
+package com.google.sakuracoin.crypto;
 
-import com.google.monacoin.core.AddressFormatException;
-import com.google.monacoin.core.Base58;
+import com.google.sakuracoin.core.AddressFormatException;
+import com.google.sakuracoin.core.Base58;
 import com.google.common.base.Functions;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Iterables;

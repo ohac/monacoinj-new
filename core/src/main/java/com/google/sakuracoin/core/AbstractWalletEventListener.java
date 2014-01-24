@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.script.Script;
+import com.google.sakuracoin.script.Script;
 
 import java.math.BigInteger;
 import java.util.List;

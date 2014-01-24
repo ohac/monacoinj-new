@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.utils;
+package com.google.sakuracoin.utils;
 
-import com.google.monacoin.core.Utils;
+import com.google.sakuracoin.core.Utils;
 
 import static com.google.common.base.Preconditions.checkArgument;
 

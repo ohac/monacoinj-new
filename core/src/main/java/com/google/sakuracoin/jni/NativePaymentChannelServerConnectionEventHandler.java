@@ -1,8 +1,8 @@
-package com.google.monacoin.jni;
+package com.google.sakuracoin.jni;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.protocols.channels.PaymentChannelCloseException;
-import com.google.monacoin.protocols.channels.ServerConnectionEventHandler;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.protocols.channels.PaymentChannelCloseException;
+import com.google.sakuracoin.protocols.channels.ServerConnectionEventHandler;
 
 import java.math.BigInteger;
 

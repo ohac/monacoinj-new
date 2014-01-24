@@ -1,6 +1,6 @@
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.params.UnitTestParams;
+import com.google.sakuracoin.params.UnitTestParams;
 import org.junit.Test;
 import org.spongycastle.util.encoders.Hex;
 

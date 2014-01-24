@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Joiner;
 import com.google.common.util.concurrent.ListenableFuture;

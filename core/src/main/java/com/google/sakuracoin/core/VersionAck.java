@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 /**
  * The verack message, sent by a client accepting the version message they

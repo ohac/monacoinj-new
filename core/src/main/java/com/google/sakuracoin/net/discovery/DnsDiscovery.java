@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.net.discovery;
+package com.google.sakuracoin.net.discovery;
 
-import com.google.monacoin.core.NetworkParameters;
+import com.google.sakuracoin.core.NetworkParameters;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

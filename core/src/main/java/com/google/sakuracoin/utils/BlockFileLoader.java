@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.utils;
+package com.google.sakuracoin.utils;
 
-import com.google.monacoin.core.Block;
-import com.google.monacoin.core.NetworkParameters;
-import com.google.monacoin.core.ProtocolException;
-import com.google.monacoin.core.Utils;
+import com.google.sakuracoin.core.Block;
+import com.google.sakuracoin.core.NetworkParameters;
+import com.google.sakuracoin.core.ProtocolException;
+import com.google.sakuracoin.core.Utils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -52,9 +52,9 @@ public class BlockFileLoader implements Iterable<Block>, Iterator<Block> {
     public static List<File> getReferenceClientBlockFileList() {
         String defaultDataDir;
         if (System.getProperty("os.name").toLowerCase().indexOf("win") >= 0) {
-            defaultDataDir = System.getenv("APPDATA") + "\\.monacoin\\blocks\\";
+            defaultDataDir = System.getenv("APPDATA") + "\\.sakuracoin\\blocks\\";
         } else {
-            defaultDataDir = System.getProperty("user.home") + "/.monacoin/blocks/";
+            defaultDataDir = System.getProperty("user.home") + "/.sakuracoin/blocks/";
         }
         
         List<File> list = new LinkedList<File>();

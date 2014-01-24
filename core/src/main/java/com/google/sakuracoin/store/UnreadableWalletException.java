@@ -1,4 +1,4 @@
-package com.google.monacoin.store;
+package com.google.sakuracoin.store;
 
 /**
  * Thrown by the {@link WalletProtobufSerializer} when the serialized protocol buffer is either corrupted,

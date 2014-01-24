@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.net.discovery;
+package com.google.sakuracoin.net.discovery;
 
-import com.google.monacoin.core.AddressFormatException;
-import com.google.monacoin.core.Base58;
-import com.google.monacoin.core.Utils;
+import com.google.sakuracoin.core.AddressFormatException;
+import com.google.sakuracoin.core.Base58;
+import com.google.sakuracoin.core.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,7 +49,7 @@ public class IrcDiscovery implements PeerDiscovery {
      * Finds a list of peers by connecting to an IRC network, joining a channel, decoding the nicks and then
      * disconnecting.
      *
-     * @param channel The IRC channel to join, either "#monacoin" or "#bitcoinTEST3" for the production and test networks
+     * @param channel The IRC channel to join, either "#sakuracoin" or "#bitcoinTEST3" for the production and test networks
      *                respectively.
      */
     public IrcDiscovery(String channel) {
@@ -61,7 +61,7 @@ public class IrcDiscovery implements PeerDiscovery {
      * disconnecting.
      *
      * @param server  Name or textual IP address of the IRC server to join.
-     * @param channel The IRC channel to join, either "#monacoin" or "#bitcoinTEST3" for the production and test networks
+     * @param channel The IRC channel to join, either "#sakuracoin" or "#bitcoinTEST3" for the production and test networks
      */
     public IrcDiscovery(String channel, String server, int port) {
         this.channel = channel;

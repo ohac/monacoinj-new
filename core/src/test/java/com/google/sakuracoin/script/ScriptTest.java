@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.script;
+package com.google.sakuracoin.script;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.params.TestNet3Params;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.params.TestNet3Params;
 import com.google.common.collect.Lists;
 
 import org.junit.Test;
@@ -33,7 +33,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
-import static com.google.monacoin.script.ScriptOpCodes.OP_INVALIDOPCODE;
+import static com.google.sakuracoin.script.ScriptOpCodes.OP_INVALIDOPCODE;
 import static org.junit.Assert.*;
 
 public class ScriptTest {

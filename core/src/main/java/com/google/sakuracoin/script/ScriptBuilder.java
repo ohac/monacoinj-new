@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.script;
+package com.google.sakuracoin.script;
 
-import com.google.monacoin.core.Address;
-import com.google.monacoin.core.ECKey;
-import com.google.monacoin.crypto.TransactionSignature;
+import com.google.sakuracoin.core.Address;
+import com.google.sakuracoin.core.ECKey;
+import com.google.sakuracoin.crypto.TransactionSignature;
 import com.google.common.collect.Lists;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.google.monacoin.script.ScriptOpCodes.*;
+import static com.google.sakuracoin.script.ScriptOpCodes.*;
 import static com.google.common.base.Preconditions.checkArgument;
 
 /**
  * <p>Tools for the construction of commonly used script types. You don't normally need this as it's hidden behind
- * convenience methods on {@link com.google.monacoin.core.Transaction}, but they are useful when working with the
+ * convenience methods on {@link com.google.sakuracoin.core.Transaction}, but they are useful when working with the
  * protocol at a lower level.</p>
  */
 public class ScriptBuilder {

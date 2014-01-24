@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.protocols.channels;
+package com.google.sakuracoin.protocols.channels;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.script.Script;
-import com.google.monacoin.script.ScriptBuilder;
-import com.google.monacoin.utils.TestWithWallet;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.script.Script;
+import com.google.sakuracoin.script.ScriptBuilder;
+import com.google.sakuracoin.utils.TestWithWallet;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
@@ -34,8 +34,8 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import static com.google.monacoin.utils.TestUtils.createFakeTx;
-import static com.google.monacoin.utils.TestUtils.makeSolvedTestBlock;
+import static com.google.sakuracoin.utils.TestUtils.createFakeTx;
+import static com.google.sakuracoin.utils.TestUtils.makeSolvedTestBlock;
 import static org.junit.Assert.*;
 
 public class PaymentChannelStateTest extends TestWithWallet {

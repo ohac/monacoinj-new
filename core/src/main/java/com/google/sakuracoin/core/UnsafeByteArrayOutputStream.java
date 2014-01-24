@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

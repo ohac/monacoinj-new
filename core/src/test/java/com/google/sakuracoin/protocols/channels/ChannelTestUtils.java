@@ -1,9 +1,9 @@
-package com.google.monacoin.protocols.channels;
+package com.google.sakuracoin.protocols.channels;
 
-import com.google.monacoin.core.Sha256Hash;
-import com.google.monacoin.core.TransactionBroadcaster;
-import com.google.monacoin.core.Utils;
-import com.google.monacoin.core.Wallet;
+import com.google.sakuracoin.core.Sha256Hash;
+import com.google.sakuracoin.core.TransactionBroadcaster;
+import com.google.sakuracoin.core.Utils;
+import com.google.sakuracoin.core.Wallet;
 import org.bitcoin.paymentchannel.Protos;
 
 import java.math.BigInteger;

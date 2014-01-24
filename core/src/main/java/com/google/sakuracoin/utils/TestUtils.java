@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.utils;
+package com.google.sakuracoin.utils;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.store.BlockStore;
-import com.google.monacoin.store.BlockStoreException;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.store.BlockStore;
+import com.google.sakuracoin.store.BlockStoreException;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

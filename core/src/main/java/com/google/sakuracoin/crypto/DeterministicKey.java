@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.monacoin.crypto;
+package com.google.sakuracoin.crypto;
 
-import com.google.monacoin.core.Base58;
-import com.google.monacoin.core.ECKey;
-import com.google.monacoin.core.Utils;
+import com.google.sakuracoin.core.Base58;
+import com.google.sakuracoin.core.ECKey;
+import com.google.sakuracoin.core.Utils;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Iterables;

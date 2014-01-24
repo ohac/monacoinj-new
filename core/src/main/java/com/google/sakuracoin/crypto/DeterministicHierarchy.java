@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.crypto;
+package com.google.sakuracoin.crypto;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Maps;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.script.Script;
-import com.google.monacoin.script.ScriptBuilder;
+import com.google.sakuracoin.script.Script;
+import com.google.sakuracoin.script.ScriptBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -190,7 +190,7 @@ public class TransactionOutput extends ChildMessage implements Serializable {
      * so we call them "dust outputs" and they're made non standard. The choice of one third is somewhat arbitrary and
      * may change in future.</p>
      *
-     * <p>You probably should use {@link com.google.monacoin.core.TransactionOutput#getMinNonDustValue()} which uses
+     * <p>You probably should use {@link com.google.sakuracoin.core.TransactionOutput#getMinNonDustValue()} which uses
      * a safe fee-per-kb by default.</p>
      *
      * @param feePerKbRequired The fee required per kilobyte. Note that this is the same as the reference client's -minrelaytxfee * 3

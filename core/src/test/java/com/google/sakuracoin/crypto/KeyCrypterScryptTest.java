@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.monacoin.crypto;
+package com.google.sakuracoin.crypto;
 
-import com.google.monacoin.core.Utils;
-import com.google.monacoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.core.Utils;
+import com.google.sakuracoin.utils.BriefLogFormatter;
 import com.google.protobuf.ByteString;
 
 import org.bitcoinj.wallet.Protos;

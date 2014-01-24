@@ -1,13 +1,13 @@
-package com.google.monacoin.wallet;
+package com.google.sakuracoin.wallet;
 
-import com.google.monacoin.core.TransactionOutput;
+import com.google.sakuracoin.core.TransactionOutput;
 
 import java.math.BigInteger;
 import java.util.Collection;
 
 /**
  * Represents the results of a
- * {@link com.google.monacoin.wallet.CoinSelector#select(java.math.BigInteger, java.util.LinkedList)} operation. A
+ * {@link com.google.sakuracoin.wallet.CoinSelector#select(java.math.BigInteger, java.util.LinkedList)} operation. A
  * coin selection represents a list of spendable transaction outputs that sum together to give valueGathered.
  * Different coin selections could be produced by different coin selectors from the same input set, according
  * to their varying policies.

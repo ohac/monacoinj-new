@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.core.AbstractBlockChain.NewBlockType;
-import com.google.monacoin.core.Wallet.BalanceType;
-import com.google.monacoin.params.MainNetParams;
+import com.google.sakuracoin.core.AbstractBlockChain.NewBlockType;
+import com.google.sakuracoin.core.Wallet.BalanceType;
+import com.google.sakuracoin.params.MainNetParams;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;

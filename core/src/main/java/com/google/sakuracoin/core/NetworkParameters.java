@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.params.*;
-import com.google.monacoin.script.Script;
-import com.google.monacoin.script.ScriptOpCodes;
+import com.google.sakuracoin.params.*;
+import com.google.sakuracoin.script.Script;
+import com.google.sakuracoin.script.ScriptOpCodes;
 import com.google.common.base.Objects;
 import org.spongycastle.util.encoders.Hex;
 
@@ -29,7 +29,7 @@ import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.google.monacoin.core.Utils.COIN;
+import static com.google.sakuracoin.core.Utils.COIN;
 
 /**
  * <p>NetworkParameters contains the data needed for working with an instantiation of a Bitcoin chain.</p>
@@ -254,7 +254,7 @@ public abstract class NetworkParameters implements Serializable {
     }
 
     /**
-     * First byte of a base58 encoded address. See {@link com.google.monacoin.core.Address}. This is the same as acceptableAddressCodes[0] and
+     * First byte of a base58 encoded address. See {@link com.google.sakuracoin.core.Address}. This is the same as acceptableAddressCodes[0] and
      * is the one used for "normal" addresses. Other types of address may be encountered with version codes found in
      * the acceptableAddressCodes array.
      */
@@ -269,7 +269,7 @@ public abstract class NetworkParameters implements Serializable {
         return p2shHeader;
     }
 
-    /** First byte of a base58 encoded dumped private key. See {@link com.google.monacoin.core.DumpedPrivateKey}. */
+    /** First byte of a base58 encoded dumped private key. See {@link com.google.sakuracoin.core.DumpedPrivateKey}. */
     public int getDumpedPrivateKeyHeader() {
         return dumpedPrivateKeyHeader;
     }
@@ -310,7 +310,7 @@ public abstract class NetworkParameters implements Serializable {
     }
 
     /**
-     * The key used to sign {@link com.google.monacoin.core.AlertMessage}s. You can use {@link com.google.monacoin.core.ECKey#verify(byte[], byte[], byte[])} to verify
+     * The key used to sign {@link com.google.sakuracoin.core.AlertMessage}s. You can use {@link com.google.sakuracoin.core.ECKey#verify(byte[], byte[], byte[])} to verify
      * signatures using it.
      */
     public byte[] getAlertSigningKey() {

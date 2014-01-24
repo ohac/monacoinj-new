@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.jni;
+package com.google.sakuracoin.jni;
 
-import com.google.monacoin.core.Transaction;
-import com.google.monacoin.core.TransactionConfidence;
+import com.google.sakuracoin.core.Transaction;
+import com.google.sakuracoin.core.TransactionConfidence;
 
 /**
  * An event listener that relays events to a native C++ object. A pointer to that object is stored in

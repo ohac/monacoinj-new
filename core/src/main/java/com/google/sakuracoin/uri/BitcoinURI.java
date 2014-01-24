@@ -16,12 +16,12 @@
  * 
  */
 
-package com.google.monacoin.uri;
+package com.google.sakuracoin.uri;
 
-import com.google.monacoin.core.Address;
-import com.google.monacoin.core.AddressFormatException;
-import com.google.monacoin.core.NetworkParameters;
-import com.google.monacoin.core.Utils;
+import com.google.sakuracoin.core.Address;
+import com.google.sakuracoin.core.AddressFormatException;
+import com.google.sakuracoin.core.NetworkParameters;
+import com.google.sakuracoin.core.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,8 +49,8 @@ import static com.google.common.base.Preconditions.checkNotNull;
  * <p>The following input forms are accepted:</p>
  *
  * <ul>
- * <li>{@code monacoin:<address>}</li>
- * <li>{@code monacoin:<address>?<name1>=<value1>&<name2>=<value2>} with multiple
+ * <li>{@code sakuracoin:<address>}</li>
+ * <li>{@code sakuracoin:<address>?<name1>=<value1>&<name2>=<value2>} with multiple
  * additional name/value pairs</li>
  * </ul>
  *
@@ -87,7 +87,7 @@ public class BitcoinURI {
     public static final String FIELD_AMOUNT = "amount";
     public static final String FIELD_ADDRESS = "address";
 
-    public static final String BITCOIN_SCHEME = "monacoin";
+    public static final String BITCOIN_SCHEME = "sakuracoin";
     private static final String ENCODED_SPACE_CHARACTER = "%20";
     private static final String AMPERSAND_SEPARATOR = "&";
     private static final String QUESTION_MARK_SEPARATOR = "?";
@@ -128,20 +128,20 @@ public class BitcoinURI {
             throw new BitcoinURIParseException("Bad URI syntax", e);
         }
 
-        // URI is formed as  monacoin:<address>?<query parameters>
-        // blockchain.info generates URIs of non-BIP compliant form monacoin://address?....
+        // URI is formed as  sakuracoin:<address>?<query parameters>
+        // blockchain.info generates URIs of non-BIP compliant form sakuracoin://address?....
         // We support both until Ben fixes his code.
         
-        // Remove the monacoin scheme.
+        // Remove the sakuracoin scheme.
         // (Note: getSchemeSpecificPart() is not used as it unescapes the label and parse then fails.
-        // For instance with : monacoin:129mVqKUmJ9uwPxKJBnNdABbuaaNfho4Ha?amount=0.06&label=Tom%20%26%20Jerry
+        // For instance with : sakuracoin:129mVqKUmJ9uwPxKJBnNdABbuaaNfho4Ha?amount=0.06&label=Tom%20%26%20Jerry
         // the & (%26) in Tom and Jerry gets interpreted as a separator and the label then gets parsed
         // as 'Tom ' instead of 'Tom & Jerry')
         String schemeSpecificPart;
-        if (input.startsWith("monacoin://")) {
-            schemeSpecificPart = input.substring("monacoin://".length());
-        } else if (input.startsWith("monacoin:")) {
-            schemeSpecificPart = input.substring("monacoin:".length());
+        if (input.startsWith("sakuracoin://")) {
+            schemeSpecificPart = input.substring("sakuracoin://".length());
+        } else if (input.startsWith("sakuracoin:")) {
+            schemeSpecificPart = input.substring("sakuracoin:".length());
         } else {
             throw new BitcoinURIParseException("Unsupported URI scheme: " + uri.getScheme());
         }

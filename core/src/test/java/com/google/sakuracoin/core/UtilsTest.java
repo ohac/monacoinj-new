@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigInteger;
 
-import static com.google.monacoin.core.Utils.*;
+import static com.google.sakuracoin.core.Utils.*;
 import static org.junit.Assert.*;
 
 public class UtilsTest {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 /**
  * Represents the "getaddr" P2P protocol message, which requests network {@link AddressMessage}s from a peer. Not to

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.jni;
+package com.google.sakuracoin.jni;
 
-import com.google.monacoin.core.*;
+import com.google.sakuracoin.core.*;
 
 import java.util.List;
 

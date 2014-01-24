@@ -1,6 +1,6 @@
-package com.google.monacoin.wallet;
+package com.google.sakuracoin.wallet;
 
-import com.google.monacoin.core.Transaction;
+import com.google.sakuracoin.core.Transaction;
 
 /**
  * This coin selector will select any transaction at all, regardless of where it came from or whether it was

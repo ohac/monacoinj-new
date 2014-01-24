@@ -1,14 +1,14 @@
-package com.google.monacoin.store;
+package com.google.sakuracoin.store;
 
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.core.TransactionConfidence.ConfidenceType;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.script.ScriptBuilder;
-import com.google.monacoin.utils.BriefLogFormatter;
-import com.google.monacoin.utils.TestUtils;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.core.TransactionConfidence.ConfidenceType;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.script.ScriptBuilder;
+import com.google.sakuracoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.utils.TestUtils;
+import com.google.sakuracoin.utils.Threading;
 import com.google.protobuf.ByteString;
 import org.bitcoinj.wallet.Protos;
 import org.junit.Before;
@@ -23,7 +23,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.Set;
 
-import static com.google.monacoin.utils.TestUtils.createFakeTx;
+import static com.google.sakuracoin.utils.TestUtils.createFakeTx;
 import static org.junit.Assert.*;
 
 public class WalletProtobufSerializerTest {

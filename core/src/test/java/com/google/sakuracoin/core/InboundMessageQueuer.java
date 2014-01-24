@@ -1,4 +1,4 @@
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 import java.net.InetSocketAddress;
 import java.util.HashMap;

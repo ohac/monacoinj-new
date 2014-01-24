@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 
 import org.slf4j.Logger;
@@ -28,7 +28,7 @@ import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.google.monacoin.core.Utils.*;
+import static com.google.sakuracoin.core.Utils.*;
 
 /**
  * <p>Methods to serialize and de-serialize messages to the Bitcoin network format as defined in

@@ -21,7 +21,7 @@
  * 
  */
 
-package com.google.monacoin.crypto;
+package com.google.sakuracoin.crypto;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;

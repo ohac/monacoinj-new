@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.core.TransactionConfidence.ConfidenceType;
-import com.google.monacoin.crypto.TransactionSignature;
-import com.google.monacoin.script.Script;
-import com.google.monacoin.script.ScriptBuilder;
-import com.google.monacoin.script.ScriptOpCodes;
+import com.google.sakuracoin.core.TransactionConfidence.ConfidenceType;
+import com.google.sakuracoin.crypto.TransactionSignature;
+import com.google.sakuracoin.script.Script;
+import com.google.sakuracoin.script.ScriptBuilder;
+import com.google.sakuracoin.script.ScriptOpCodes;
 import com.google.common.collect.ImmutableMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +33,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static com.google.monacoin.core.Utils.*;
+import static com.google.sakuracoin.core.Utils.*;
 import static com.google.common.base.Preconditions.*;
 
 /**
@@ -64,16 +64,16 @@ public class Transaction extends ChildMessage implements Serializable {
      * If fee is lower than this value (in satoshis), a default reference client will treat it as if there were no fee.
      * Currently this is 10000 satoshis.
      */
-    public static final BigInteger REFERENCE_DEFAULT_MIN_TX_FEE = BigInteger.valueOf(100000); // 0.001 MONA minimum fee!
+    public static final BigInteger REFERENCE_DEFAULT_MIN_TX_FEE = BigInteger.valueOf(100000); // 0.001 SKR minimum fee!
 
     /**
      * Any standard (ie pay-to-address) output smaller than this value (in satoshis) will most likely be rejected by the network.
      * This is calculated by assuming a standard output will be 34 bytes, and then using the formula used in
      * {@link TransactionOutput#getMinNonDustValue(BigInteger)}. Currently it's 5460 satoshis.
      */
-    public static final BigInteger MIN_NONDUST_OUTPUT = BigInteger.valueOf(100000); //MONA: We can send one "shibetoshi" but this will cost us extra fee!
+    public static final BigInteger MIN_NONDUST_OUTPUT = BigInteger.valueOf(100000); //SKR: We can send one "shibetoshi" but this will cost us extra fee!
 
-    // These are serialized in both monacoin and java serialization.
+    // These are serialized in both sakuracoin and java serialization.
     private long version;
     private ArrayList<TransactionInput> inputs;
     private ArrayList<TransactionOutput> outputs;
@@ -617,7 +617,7 @@ public class Transaction extends ChildMessage implements Serializable {
                 s.append(scriptPubKey);
                 s.append(" ");
                 s.append(bitcoinValueToFriendlyString(out.getValue()));
-                s.append(" MONA");
+                s.append(" SKR");
                 if (!out.isAvailableForSpending()) {
                     s.append(" Spent");
                 }
@@ -693,7 +693,7 @@ public class Transaction extends ChildMessage implements Serializable {
     }
 
     /**
-     * Same as {@link #addSignedInput(TransactionOutPoint, com.google.monacoin.script.Script, ECKey, com.google.monacoin.core.Transaction.SigHash, boolean)}
+     * Same as {@link #addSignedInput(TransactionOutPoint, com.google.sakuracoin.script.Script, ECKey, com.google.sakuracoin.core.Transaction.SigHash, boolean)}
      * but defaults to {@link SigHash#ALL} and "false" for the anyoneCanPay flag. This is normally what you want.
      */
     public TransactionInput addSignedInput(TransactionOutPoint prevOut, Script scriptPubKey, ECKey sigKey) throws ScriptException {
@@ -853,7 +853,7 @@ public class Transaction extends ChildMessage implements Serializable {
 
     /**
      * Calculates a signature that is valid for being inserted into the input at the given position. This is simply
-     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.google.monacoin.core.Transaction.SigHash, boolean)}
+     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.google.sakuracoin.core.Transaction.SigHash, boolean)}
      * followed by {@link ECKey#sign(Sha256Hash, org.spongycastle.crypto.params.KeyParameter)} and then returning
      * a new {@link TransactionSignature}.
      *
@@ -874,7 +874,7 @@ public class Transaction extends ChildMessage implements Serializable {
 
     /**
      * Calculates a signature that is valid for being inserted into the input at the given position. This is simply
-     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.google.monacoin.core.Transaction.SigHash, boolean)}
+     * a wrapper around calling {@link Transaction#hashForSignature(int, byte[], com.google.sakuracoin.core.Transaction.SigHash, boolean)}
      * followed by {@link ECKey#sign(Sha256Hash)} and then returning a new {@link TransactionSignature}.
      *
      * @param inputIndex Which input to calculate the signature for, as an index.
@@ -934,7 +934,7 @@ public class Transaction extends ChildMessage implements Serializable {
         // The SIGHASH flags are used in the design of contracts, please see this page for a further understanding of
         // the purposes of the code in this method:
         //
-        //   https://en.monacoin.it/wiki/Contracts
+        //   https://en.sakuracoin.it/wiki/Contracts
 
         try {
             // Store all the input scripts and clear them in preparation for signing. If we're signing a fresh

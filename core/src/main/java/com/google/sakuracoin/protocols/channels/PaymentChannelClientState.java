@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.protocols.channels;
+package com.google.sakuracoin.protocols.channels;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.crypto.TransactionSignature;
-import com.google.monacoin.script.Script;
-import com.google.monacoin.script.ScriptBuilder;
-import com.google.monacoin.utils.Threading;
-import com.google.monacoin.wallet.AllowUnconfirmedCoinSelector;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.crypto.TransactionSignature;
+import com.google.sakuracoin.script.Script;
+import com.google.sakuracoin.script.ScriptBuilder;
+import com.google.sakuracoin.utils.Threading;
+import com.google.sakuracoin.wallet.AllowUnconfirmedCoinSelector;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Throwables;
 import com.google.common.collect.Lists;
@@ -232,7 +232,7 @@ public class PaymentChannelClientState {
      * Creates the initial multisig contract and incomplete refund transaction which can be requested at the appropriate
      * time using {@link PaymentChannelClientState#getIncompleteRefundTransaction} and
      * {@link PaymentChannelClientState#getMultisigContract()}. The way the contract is crafted can be adjusted by
-     * overriding {@link PaymentChannelClientState#editContractSendRequest(com.google.monacoin.core.Wallet.SendRequest)}.
+     * overriding {@link PaymentChannelClientState#editContractSendRequest(com.google.sakuracoin.core.Wallet.SendRequest)}.
      * By default unconfirmed coins are allowed to be used, as for micropayments the risk should be relatively low.
      *
      * @throws ValueOutOfRangeException if the value being used is too small to be accepted by the network

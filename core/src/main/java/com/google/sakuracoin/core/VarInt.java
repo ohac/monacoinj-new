@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 import com.google.common.primitives.UnsignedInteger;
 
-import static com.google.monacoin.core.Utils.isLessThanUnsigned;
+import static com.google.sakuracoin.core.Utils.isLessThanUnsigned;
 
 /**
  * A variable-length encoded integer using Satoshis encoding.

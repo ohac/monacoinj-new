@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.kits;
+package com.google.sakuracoin.kits;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.net.discovery.DnsDiscovery;
-import com.google.monacoin.store.BlockStoreException;
-import com.google.monacoin.store.SPVBlockStore;
-import com.google.monacoin.store.WalletProtobufSerializer;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.net.discovery.DnsDiscovery;
+import com.google.sakuracoin.store.BlockStoreException;
+import com.google.sakuracoin.store.SPVBlockStore;
+import com.google.sakuracoin.store.WalletProtobufSerializer;
 import com.google.common.util.concurrent.AbstractIdleService;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;

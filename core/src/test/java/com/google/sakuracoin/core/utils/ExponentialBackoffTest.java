@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core.utils;
+package com.google.sakuracoin.core.utils;
 
-import com.google.monacoin.core.Utils;
-import com.google.monacoin.utils.ExponentialBackoff;
+import com.google.sakuracoin.core.Utils;
+import com.google.sakuracoin.utils.ExponentialBackoff;
 
 import org.junit.Before;
 import org.junit.Test;

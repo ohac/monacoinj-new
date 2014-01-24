@@ -1,4 +1,4 @@
-package com.google.monacoin.crypto;
+package com.google.sakuracoin.crypto;
 
 /**
  * <p>Exception to provide the following to {@link EncrypterDecrypterOpenSSL}:</p>

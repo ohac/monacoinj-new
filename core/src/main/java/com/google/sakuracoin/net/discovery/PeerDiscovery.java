@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.net.discovery;
+package com.google.sakuracoin.net.discovery;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.TimeUnit;

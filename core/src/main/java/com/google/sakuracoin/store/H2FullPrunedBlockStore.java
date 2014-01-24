@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.store;
+package com.google.sakuracoin.store;
 
-import com.google.monacoin.core.*;
+import com.google.sakuracoin.core.*;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

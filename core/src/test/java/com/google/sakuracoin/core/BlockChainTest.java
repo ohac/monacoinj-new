@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.core.Wallet.BalanceType;
-import com.google.monacoin.params.MainNetParams;
-import com.google.monacoin.params.TestNet2Params;
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.store.BlockStore;
-import com.google.monacoin.store.MemoryBlockStore;
-import com.google.monacoin.utils.BriefLogFormatter;
-import com.google.monacoin.utils.TestUtils;
+import com.google.sakuracoin.core.Wallet.BalanceType;
+import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.params.TestNet2Params;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.store.BlockStore;
+import com.google.sakuracoin.store.MemoryBlockStore;
+import com.google.sakuracoin.utils.BriefLogFormatter;
+import com.google.sakuracoin.utils.TestUtils;
 import com.google.common.util.concurrent.ListenableFuture;
 import org.junit.After;
 import org.junit.Before;
@@ -33,8 +33,8 @@ import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static com.google.monacoin.utils.TestUtils.createFakeBlock;
-import static com.google.monacoin.utils.TestUtils.createFakeTx;
+import static com.google.sakuracoin.utils.TestUtils.createFakeBlock;
+import static com.google.sakuracoin.utils.TestUtils.createFakeTx;
 import static org.junit.Assert.*;
 
 // Handling of chain splits/reorgs are in ChainSplitTests.

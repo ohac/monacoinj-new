@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.crypto;
+package com.google.sakuracoin.crypto;
 
 public class HDDerivationException extends RuntimeException {
     public HDDerivationException(String message) {

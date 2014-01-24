@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.params;
+package com.google.sakuracoin.params;
 
-import com.google.monacoin.core.NetworkParameters;
-import com.google.monacoin.core.Utils;
+import com.google.sakuracoin.core.NetworkParameters;
+import com.google.sakuracoin.core.Utils;
 
 import static com.google.common.base.Preconditions.checkState;
 

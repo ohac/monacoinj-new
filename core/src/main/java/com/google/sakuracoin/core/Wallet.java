@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.core.TransactionConfidence.ConfidenceType;
-import com.google.monacoin.crypto.KeyCrypter;
-import com.google.monacoin.crypto.KeyCrypterException;
-import com.google.monacoin.crypto.KeyCrypterScrypt;
-import com.google.monacoin.script.Script;
-import com.google.monacoin.script.ScriptBuilder;
-import com.google.monacoin.script.ScriptChunk;
-import com.google.monacoin.store.UnreadableWalletException;
-import com.google.monacoin.store.WalletProtobufSerializer;
-import com.google.monacoin.utils.ListenerRegistration;
-import com.google.monacoin.utils.Threading;
-import com.google.monacoin.wallet.*;
-import com.google.monacoin.wallet.WalletTransaction.Pool;
+import com.google.sakuracoin.core.TransactionConfidence.ConfidenceType;
+import com.google.sakuracoin.crypto.KeyCrypter;
+import com.google.sakuracoin.crypto.KeyCrypterException;
+import com.google.sakuracoin.crypto.KeyCrypterScrypt;
+import com.google.sakuracoin.script.Script;
+import com.google.sakuracoin.script.ScriptBuilder;
+import com.google.sakuracoin.script.ScriptChunk;
+import com.google.sakuracoin.store.UnreadableWalletException;
+import com.google.sakuracoin.store.WalletProtobufSerializer;
+import com.google.sakuracoin.utils.ListenerRegistration;
+import com.google.sakuracoin.utils.Threading;
+import com.google.sakuracoin.wallet.*;
+import com.google.sakuracoin.wallet.WalletTransaction.Pool;
 import com.google.common.collect.*;
 import com.google.common.primitives.Ints;
 import com.google.common.util.concurrent.FutureCallback;
@@ -51,8 +51,8 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
-import static com.google.monacoin.core.Utils.bitcoinValueToFriendlyString;
-import static com.google.monacoin.core.Utils.bitcoinValueToPlainString;
+import static com.google.sakuracoin.core.Utils.bitcoinValueToFriendlyString;
+import static com.google.sakuracoin.core.Utils.bitcoinValueToPlainString;
 import static com.google.common.base.Preconditions.*;
 
 // To do list:
@@ -92,7 +92,7 @@ import static com.google.common.base.Preconditions.*;
  * that simplifies this for you although you're still responsible for manually triggering a save when your app is about
  * to quit because the auto-save feature waits a moment before actually committing to disk to avoid IO thrashing when
  * the wallet is changing very fast (eg due to a block chain sync). See
- * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.google.monacoin.wallet.WalletFiles.Listener)}
+ * {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.google.sakuracoin.wallet.WalletFiles.Listener)}
  * for more information about this.</p>
  */
 public class Wallet implements Serializable, BlockChainListener, PeerFilterProvider {
@@ -627,8 +627,8 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
             BigInteger valueSentToMe = tx.getValueSentToMe(this);
             BigInteger valueSentFromMe = tx.getValueSentFromMe(this);
             if (log.isInfoEnabled()) {
-                log.info(String.format("Received a pending transaction %s that spends %s MONA from our own wallet," +
-                        " and sends us %s MONA", tx.getHashAsString(), Utils.bitcoinValueToFriendlyString(valueSentFromMe),
+                log.info(String.format("Received a pending transaction %s that spends %s SKR from our own wallet," +
+                        " and sends us %s SKR", tx.getHashAsString(), Utils.bitcoinValueToFriendlyString(valueSentFromMe),
                         Utils.bitcoinValueToFriendlyString(valueSentToMe)));
             }
             if (tx.getConfidence().getSource().equals(TransactionConfidence.Source.UNKNOWN)) {
@@ -818,7 +818,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
         BigInteger valueSentToMe = tx.getValueSentToMe(this);
         BigInteger valueDifference = valueSentToMe.subtract(valueSentFromMe);
 
-        log.info("Received tx{} for {} MONA: {} [{}] in block {}", sideChain ? " on a side chain" : "",
+        log.info("Received tx{} for {} SKR: {} [{}] in block {}", sideChain ? " on a side chain" : "",
                 bitcoinValueToFriendlyString(valueDifference), tx.getHashAsString(), relativityOffset,
                 block != null ? block.getHeader().getHash() : "(unit test)");
 
@@ -1505,7 +1505,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
         /**
          * When emptyWallet is set, all coins selected by the coin selector are sent to the first output in tx
-         * (its value is ignored and set to {@link com.google.monacoin.core.Wallet#getBalance()} - the fees required
+         * (its value is ignored and set to {@link com.google.sakuracoin.core.Wallet#getBalance()} - the fees required
          * for the transaction). Any additional outputs are removed.
          */
         public boolean emptyWallet = false;
@@ -1528,7 +1528,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
          * at least {@link Transaction#REFERENCE_DEFAULT_MIN_TX_FEE} if it is set, as default reference clients will
          * otherwise simply treat the transaction as if there were no fee at all.</p>
          *
-         * <p>Once {@link Wallet#completeTx(com.google.monacoin.core.Wallet.SendRequest)} is called, this is set to the
+         * <p>Once {@link Wallet#completeTx(com.google.sakuracoin.core.Wallet.SendRequest)} is called, this is set to the
          * value of the fee that was added.</p>
          *
          * <p>You might also consider adding a {@link SendRequest#feePerKb} to set the fee per kb of transaction size
@@ -1577,7 +1577,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
         public KeyParameter aesKey = null;
 
         /**
-         * If not null, the {@link com.google.monacoin.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
+         * If not null, the {@link com.google.sakuracoin.wallet.CoinSelector} to use instead of the wallets default. Coin selectors are
          * responsible for choosing which transaction outputs (coins) in a wallet to use given the desired send value
          * amount.
          */
@@ -1817,17 +1817,17 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
             List<TransactionInput> originalInputs = new ArrayList<TransactionInput>(req.tx.getInputs());
 
-            // We need to know if we need to add an additional fee because one of our values are smaller than 1 MONA
+            // We need to know if we need to add an additional fee because one of our values are smaller than 1 SKR
             boolean needAtLeastReferenceFee = false;
             int txOutDustFeeCount = 0;
             if (req.ensureMinRequiredFee && !req.emptyWallet) { // min fee checking is handled later for emptyWallet
                 for (TransactionOutput output : req.tx.getOutputs())
-                    if (output.getValue().compareTo(Utils.COIN) < 0) { //TXOut lower than 1 MONA have a 2 MONA fee!
-                        //TODO Currently Monacoin doesn't have this. We can put it back in later.
+                    if (output.getValue().compareTo(Utils.COIN) < 0) { //TXOut lower than 1 SKR have a 2 SKR fee!
+                        //TODO Currently Sakuracoin doesn't have this. We can put it back in later.
 //                        if (output.getValue().compareTo(output.getMinNonDustValue()) < 0)
 //                            throw new IllegalArgumentException("Tried to send dust with ensureMinRequiredFee set - no way to complete this");
                         needAtLeastReferenceFee = true;
-                        txOutDustFeeCount++; //MONA: Each TXOut < 1 MONA needs +1 MONA fee!
+                        txOutDustFeeCount++; //SKR: Each TXOut < 1 SKR needs +1 SKR fee!
                     }
             }
 
@@ -1999,7 +1999,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Adds the given ECKey to the wallet. There is currently no way to delete keys (that would result in coin loss).
-     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.google.monacoin.wallet.WalletFiles.Listener)}
+     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.google.sakuracoin.wallet.WalletFiles.Listener)}
      * has been called, triggers an auto save bypassing the normal coalescing delay and event handlers.
      * If the key already exists in the wallet, does nothing and returns false.
      */
@@ -2009,7 +2009,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Adds the given keys to the wallet. There is currently no way to delete keys (that would result in coin loss).
-     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.google.monacoin.wallet.WalletFiles.Listener)}
+     * If {@link Wallet#autosaveToFile(java.io.File, long, java.util.concurrent.TimeUnit, com.google.sakuracoin.wallet.WalletFiles.Listener)}
      * has been called, triggers an auto save bypassing the normal coalescing delay and event handlers.
      * Returns the number of keys added, after duplicates are ignored. The onKeyAdded event will be called for each key
      * in the list that was not already present.
@@ -2289,7 +2289,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
         try {
             StringBuilder builder = new StringBuilder();
             BigInteger balance = getBalance(BalanceType.ESTIMATED);
-            builder.append(String.format("Wallet containing %s MONA in:%n",
+            builder.append(String.format("Wallet containing %s SKR in:%n",
                     bitcoinValueToPlainString(balance)));
             builder.append(String.format("  %d unspent transactions%n", unspent.size()));
             builder.append(String.format("  %d spent transactions%n", spent.size()));
@@ -2571,7 +2571,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Returns the earliest creation time of keys or watched scripts in this wallet, in seconds since the epoch, ie the min
-     * of {@link com.google.monacoin.core.ECKey#getCreationTimeSeconds()}. This can return zero if at least one key does
+     * of {@link com.google.sakuracoin.core.ECKey#getCreationTimeSeconds()}. This can return zero if at least one key does
      * not have that data (was created before key timestamping was implemented). <p>
      *     
      * This method is most often used in conjunction with {@link PeerGroup#setFastCatchupTimeSecs(long)} in order to
@@ -2682,7 +2682,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
     }
 
     /**
-     * Convenience wrapper around {@link Wallet#encrypt(com.google.monacoin.crypto.KeyCrypter,
+     * Convenience wrapper around {@link Wallet#encrypt(com.google.sakuracoin.crypto.KeyCrypter,
      * org.spongycastle.crypto.params.KeyParameter)} which uses the default Scrypt key derivation algorithm and
      * parameters, derives a key from the given password and returns the created key.
      */
@@ -2697,7 +2697,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
     /**
      * Encrypt the wallet using the KeyCrypter and the AES key. A good default KeyCrypter to use is
-     * {@link com.google.monacoin.crypto.KeyCrypterScrypt}.
+     * {@link com.google.sakuracoin.crypto.KeyCrypterScrypt}.
      *
      * @param keyCrypter The KeyCrypter that specifies how to encrypt/ decrypt a key
      * @param aesKey AES key to use (normally created using KeyCrypter#deriveKey and cached as it is time consuming to create from a password)
@@ -2720,7 +2720,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
 
                     // Check that the encrypted key can be successfully decrypted.
                     // This is done as it is a critical failure if the private key cannot be decrypted successfully
-                    // (all monacoin controlled by that private key is lost forever).
+                    // (all sakuracoin controlled by that private key is lost forever).
                     // For a correctly constructed keyCrypter the encryption should always be reversible so it is just being as cautious as possible.
                     if (!ECKey.encryptionIsReversible(key, encryptedKey, keyCrypter, aesKey)) {
                         // Abort encryption
@@ -2805,7 +2805,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
     }
 
     /**
-     * <p>Convenience wrapper around {@link Wallet#addNewEncryptedKey(com.google.monacoin.crypto.KeyCrypter,
+     * <p>Convenience wrapper around {@link Wallet#addNewEncryptedKey(com.google.sakuracoin.crypto.KeyCrypter,
      * org.spongycastle.crypto.params.KeyParameter)} which just derives the key afresh and uses the pre-set
      * keycrypter. The wallet must have been encrypted using one of the encrypt methods previously.</p>
      *
@@ -3110,7 +3110,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
      * money to fail! Finally please be aware that any listeners on the future will run either on the calling thread
      * if it completes immediately, or eventually on a background thread if the balance is not yet at the right
      * level. If you do something that means you know the balance should be sufficient to trigger the future,
-     * you can use {@link com.google.monacoin.utils.Threading#waitForUserCode()} to block until the future had a
+     * you can use {@link com.google.sakuracoin.utils.Threading#waitForUserCode()} to block until the future had a
      * chance to be updated.</p>
      */
     public ListenableFuture<BigInteger> getBalanceFuture(final BigInteger value, final BalanceType type) {
@@ -3372,7 +3372,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
                 if (needAtLeastReferenceFee && fees.compareTo(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE) < 0)
                     fees = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE;
 
-                //MONA: Add 1 MONA fee per txOut < 1 MONA
+                //SKR: Add 1 SKR fee per txOut < 1 SKR
                 if (txOutDustFeeCount > 0)
                     fees = fees.add(Transaction.REFERENCE_DEFAULT_MIN_TX_FEE.multiply(BigInteger.valueOf(txOutDustFeeCount)));
 
@@ -3404,7 +3404,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
                 if (additionalValueSelected != null)
                     change = change.add(additionalValueSelected);
 
-                // If change is < 1 DOGE, we will need to have at least minfee to be accepted by the network
+                // If change is < 1 SKR, we will need to have at least minfee to be accepted by the network
                 if (req.ensureMinRequiredFee && !change.equals(BigInteger.ZERO) && change.compareTo(Utils.COIN) < 0) {
                     // This solution may fit into category 2, but it may also be category 3, we'll check that later
                     eitherCategory2Or3 = true;
@@ -3426,12 +3426,12 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
                     // If the change output would result in this transaction being rejected as dust, just drop the change and make it a fee
                     if (req.ensureMinRequiredFee && Transaction.MIN_NONDUST_OUTPUT.compareTo(change) > 0) {
                         // This solution definitely fits in category 3
-                        //Throw away change lower than 1 DOGE as this is cheaper than paying the 1 DOGE fee.
+                        //Throw away change lower than 1 SKR as this is cheaper than paying the 1 SKR fee.
                         isCategory3 = true;
                         additionalValueForNextCategory = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE.add(
                                                          Transaction.MIN_NONDUST_OUTPUT.add(BigInteger.ONE));
                         //additionalValueForNextCategory = Transaction.REFERENCE_DEFAULT_MIN_TX_FEE.add(BigInteger.ONE);
-                                                         //MONA: We don't have a min value, but we add more fees for tx < 1
+                                                         //SKR: We don't have a min value, but we add more fees for tx < 1
                     } else {
                         size += changeOutput.bitcoinSerialize().length + VarInt.sizeOf(req.tx.getOutputs().size()) - VarInt.sizeOf(req.tx.getOutputs().size() - 1);
                         // This solution is either category 1 or 2
@@ -3573,7 +3573,7 @@ public class Wallet implements Serializable, BlockChainListener, PeerFilterProvi
      * re-organisation of the wallet contents on the block chain. For instance, in future the wallet may choose to
      * optimise itself to reduce fees or improve privacy.</p>
      */
-    public void setTransactionBroadcaster(@Nullable com.google.monacoin.core.TransactionBroadcaster broadcaster) {
+    public void setTransactionBroadcaster(@Nullable com.google.sakuracoin.core.TransactionBroadcaster broadcaster) {
         Transaction[] toBroadcast = {};
         lock.lock();
         try {

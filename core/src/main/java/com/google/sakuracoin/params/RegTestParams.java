@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.params;
+package com.google.sakuracoin.params;
 
-import com.google.monacoin.core.Block;
+import com.google.sakuracoin.core.Block;
 
 import java.math.BigInteger;
 

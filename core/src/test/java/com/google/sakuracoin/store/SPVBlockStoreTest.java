@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.store;
+package com.google.sakuracoin.store;
 
-import com.google.monacoin.core.Address;
-import com.google.monacoin.core.ECKey;
-import com.google.monacoin.core.NetworkParameters;
-import com.google.monacoin.core.StoredBlock;
-import com.google.monacoin.params.UnitTestParams;
+import com.google.sakuracoin.core.Address;
+import com.google.sakuracoin.core.ECKey;
+import com.google.sakuracoin.core.NetworkParameters;
+import com.google.sakuracoin.core.StoredBlock;
+import com.google.sakuracoin.params.UnitTestParams;
 import org.junit.Test;
 
 import java.io.File;

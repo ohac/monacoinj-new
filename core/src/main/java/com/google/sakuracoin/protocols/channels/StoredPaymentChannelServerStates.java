@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.protocols.channels;
+package com.google.sakuracoin.protocols.channels;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.ByteString;
 import net.jcip.annotations.GuardedBy;

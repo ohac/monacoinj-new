@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.wallet;
+package com.google.sakuracoin.wallet;
 
-import com.google.monacoin.core.Transaction;
-import com.google.monacoin.core.TransactionConfidence;
-import com.google.monacoin.core.Wallet;
+import com.google.sakuracoin.core.Transaction;
+import com.google.sakuracoin.core.TransactionConfidence;
+import com.google.sakuracoin.core.Wallet;
 
 import javax.annotation.Nullable;
 import java.util.List;

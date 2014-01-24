@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.net;
+package com.google.sakuracoin.net;
 
-import com.google.monacoin.core.Utils;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.core.Utils;
+import com.google.sakuracoin.utils.Threading;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.MessageLite;

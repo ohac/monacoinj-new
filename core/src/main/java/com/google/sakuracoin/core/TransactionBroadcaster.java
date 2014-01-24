@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 import com.google.common.util.concurrent.ListenableFuture;
 
 /**
  * A general interface which declares the ability to broadcast transactions. This is implemented
- * by {@link com.google.monacoin.core.PeerGroup}.
+ * by {@link com.google.sakuracoin.core.PeerGroup}.
  */
 public interface TransactionBroadcaster {
     /** Broadcast the given transaction on the network */

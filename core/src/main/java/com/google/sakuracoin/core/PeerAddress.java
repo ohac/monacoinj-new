@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.params.MainNetParams;
+import com.google.sakuracoin.params.MainNetParams;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -25,8 +25,8 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
-import static com.google.monacoin.core.Utils.uint32ToByteStreamLE;
-import static com.google.monacoin.core.Utils.uint64ToByteStreamLE;
+import static com.google.sakuracoin.core.Utils.uint32ToByteStreamLE;
+import static com.google.sakuracoin.core.Utils.uint64ToByteStreamLE;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 /**

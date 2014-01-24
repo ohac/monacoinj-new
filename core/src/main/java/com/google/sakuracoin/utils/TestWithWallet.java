@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.utils;
+package com.google.sakuracoin.utils;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.store.BlockStore;
-import com.google.monacoin.store.MemoryBlockStore;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.store.BlockStore;
+import com.google.sakuracoin.store.MemoryBlockStore;
 
 import javax.annotation.Nullable;
 import java.io.IOException;
 import java.math.BigInteger;
 
-import static com.google.monacoin.utils.TestUtils.createFakeBlock;
-import static com.google.monacoin.utils.TestUtils.createFakeTx;
+import static com.google.sakuracoin.utils.TestUtils.createFakeBlock;
+import static com.google.sakuracoin.utils.TestUtils.createFakeTx;
 
 // TODO: This needs to be somewhat rewritten - the "sendMoneyToWallet" methods aren't sending via the block chain object
 

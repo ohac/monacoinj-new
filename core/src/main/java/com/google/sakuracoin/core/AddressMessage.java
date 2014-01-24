@@ -1,4 +1,4 @@
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 import java.io.IOException;
 import java.io.OutputStream;

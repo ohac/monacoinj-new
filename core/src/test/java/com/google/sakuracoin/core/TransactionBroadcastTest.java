@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.store.MemoryBlockStore;
-import com.google.monacoin.utils.TestUtils;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.store.MemoryBlockStore;
+import com.google.sakuracoin.utils.TestUtils;
+import com.google.sakuracoin.utils.Threading;
 import com.google.common.util.concurrent.ListenableFuture;
 import org.junit.After;
 import org.junit.Before;

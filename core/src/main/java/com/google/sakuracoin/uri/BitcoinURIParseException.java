@@ -16,7 +16,7 @@
  *
  */
 
-package com.google.monacoin.uri;
+package com.google.sakuracoin.uri;
 
 /**
  * <p>Exception to provide the following to {@link BitcoinURI}:</p>

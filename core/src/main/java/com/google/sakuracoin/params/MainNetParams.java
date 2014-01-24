@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.params;
+package com.google.sakuracoin.params;
 
-import com.google.monacoin.core.NetworkParameters;
-import com.google.monacoin.core.Utils;
+import com.google.sakuracoin.core.NetworkParameters;
+import com.google.sakuracoin.core.Utils;
 
 import static com.google.common.base.Preconditions.checkState;
 
@@ -55,10 +55,10 @@ public class MainNetParams extends NetworkParameters {
         checkpoints.put(91842, new Sha256Hash("00000000000a4d0a398161ffc163c503763b1f4360639393e0e4c8e300e0caec"));
         checkpoints.put(91880, new Sha256Hash("00000000000743f190a18c5577a3c2d2a1f610ae9601ac046a38084ccb7cd721"));
         checkpoints.put(200000, new Sha256Hash("000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf")); */
-        //TODO Get actual Monacoin checkpoints
+        //TODO Get actual Sakuracoin checkpoints
 
         dnsSeeds = new String[] {
-	    "dnsseed.monacoin.org"
+	    "dnsseed.sakuracoin.org"
                 //TODO Add more...
         };
     }

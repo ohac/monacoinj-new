@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.protocols.channels;
+package com.google.sakuracoin.protocols.channels;
 
-import com.google.monacoin.core.*;
-import com.google.monacoin.store.WalletProtobufSerializer;
-import com.google.monacoin.utils.TestWithWallet;
-import com.google.monacoin.utils.Threading;
-import com.google.monacoin.wallet.WalletFiles;
+import com.google.sakuracoin.core.*;
+import com.google.sakuracoin.store.WalletProtobufSerializer;
+import com.google.sakuracoin.utils.TestWithWallet;
+import com.google.sakuracoin.utils.Threading;
+import com.google.sakuracoin.wallet.WalletFiles;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
 import com.google.protobuf.ByteString;
@@ -39,8 +39,8 @@ import java.net.SocketAddress;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import static com.google.monacoin.protocols.channels.PaymentChannelCloseException.CloseReason;
-import static com.google.monacoin.utils.TestUtils.createFakeBlock;
+import static com.google.sakuracoin.protocols.channels.PaymentChannelCloseException.CloseReason;
+import static com.google.sakuracoin.utils.TestUtils.createFakeBlock;
 import static org.bitcoin.paymentchannel.Protos.TwoWayChannelMessage.MessageType;
 import static org.junit.Assert.*;
 

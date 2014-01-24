@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.protocols.channels;
+package com.google.sakuracoin.protocols.channels;
 
-import com.google.monacoin.core.Sha256Hash;
-import com.google.monacoin.core.TransactionBroadcaster;
-import com.google.monacoin.core.Wallet;
-import com.google.monacoin.net.NioServer;
-import com.google.monacoin.net.ProtobufParser;
-import com.google.monacoin.net.StreamParserFactory;
+import com.google.sakuracoin.core.Sha256Hash;
+import com.google.sakuracoin.core.TransactionBroadcaster;
+import com.google.sakuracoin.core.Wallet;
+import com.google.sakuracoin.net.NioServer;
+import com.google.sakuracoin.net.ProtobufParser;
+import com.google.sakuracoin.net.StreamParserFactory;
 import org.bitcoin.paymentchannel.Protos;
 
 import javax.annotation.Nullable;

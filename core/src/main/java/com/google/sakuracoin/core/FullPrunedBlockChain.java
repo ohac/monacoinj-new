@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.script.Script;
-import com.google.monacoin.store.BlockStoreException;
-import com.google.monacoin.store.FullPrunedBlockStore;
+import com.google.sakuracoin.script.Script;
+import com.google.sakuracoin.store.BlockStoreException;
+import com.google.sakuracoin.store.FullPrunedBlockStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

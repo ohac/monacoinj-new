@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.jni;
+package com.google.sakuracoin.jni;
 
-import com.google.monacoin.core.ECKey;
-import com.google.monacoin.core.Transaction;
-import com.google.monacoin.core.Wallet;
-import com.google.monacoin.core.WalletEventListener;
-import com.google.monacoin.script.Script;
+import com.google.sakuracoin.core.ECKey;
+import com.google.sakuracoin.core.Transaction;
+import com.google.sakuracoin.core.Wallet;
+import com.google.sakuracoin.core.WalletEventListener;
+import com.google.sakuracoin.script.Script;
 
 import java.math.BigInteger;
 import java.util.List;

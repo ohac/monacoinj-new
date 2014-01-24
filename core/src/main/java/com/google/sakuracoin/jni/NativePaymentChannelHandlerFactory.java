@@ -1,7 +1,7 @@
-package com.google.monacoin.jni;
+package com.google.sakuracoin.jni;
 
-import com.google.monacoin.protocols.channels.PaymentChannelServerListener;
-import com.google.monacoin.protocols.channels.ServerConnectionEventHandler;
+import com.google.sakuracoin.protocols.channels.PaymentChannelServerListener;
+import com.google.sakuracoin.protocols.channels.ServerConnectionEventHandler;
 
 import javax.annotation.Nullable;
 import java.net.SocketAddress;

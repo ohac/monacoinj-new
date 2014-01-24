@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.store;
+package com.google.sakuracoin.store;
 
-import com.google.monacoin.core.Sha256Hash;
-import com.google.monacoin.core.StoredBlock;
-import com.google.monacoin.core.StoredTransactionOutput;
-import com.google.monacoin.core.StoredUndoableBlock;
+import com.google.sakuracoin.core.Sha256Hash;
+import com.google.sakuracoin.core.StoredBlock;
+import com.google.sakuracoin.core.StoredTransactionOutput;
+import com.google.sakuracoin.core.StoredUndoableBlock;
 
 /**
  * <p>An implementor of FullPrunedBlockStore saves StoredBlock objects to some storage mechanism.</p>

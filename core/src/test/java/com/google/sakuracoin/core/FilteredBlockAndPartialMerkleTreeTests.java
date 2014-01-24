@@ -1,8 +1,8 @@
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
-import com.google.monacoin.core.TransactionConfidence.ConfidenceType;
-import com.google.monacoin.params.UnitTestParams;
-import com.google.monacoin.store.MemoryBlockStore;
+import com.google.sakuracoin.core.TransactionConfidence.ConfidenceType;
+import com.google.sakuracoin.params.UnitTestParams;
+import com.google.sakuracoin.store.MemoryBlockStore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;

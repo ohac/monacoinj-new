@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 /**
  * <p>An object implementing this interface can be added to a {@link Wallet} and provide arbitrary byte arrays that will

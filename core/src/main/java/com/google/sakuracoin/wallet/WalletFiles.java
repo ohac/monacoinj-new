@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.wallet;
+package com.google.sakuracoin.wallet;
 
-import com.google.monacoin.core.Wallet;
-import com.google.monacoin.utils.Threading;
+import com.google.sakuracoin.core.Wallet;
+import com.google.sakuracoin.utils.Threading;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

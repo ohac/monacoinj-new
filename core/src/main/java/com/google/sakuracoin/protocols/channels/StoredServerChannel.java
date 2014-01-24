@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.protocols.channels;
+package com.google.sakuracoin.protocols.channels;
 
-import com.google.monacoin.core.*;
+import com.google.sakuracoin.core.*;
 
 import javax.annotation.Nullable;
 import java.math.BigInteger;
@@ -79,7 +79,7 @@ public class StoredServerChannel {
     }
 
     /**
-     * If a handler is connected, call its {@link com.google.monacoin.protocols.channels.PaymentChannelServer#close()}
+     * If a handler is connected, call its {@link com.google.sakuracoin.protocols.channels.PaymentChannelServer#close()}
      * method thus disconnecting the TCP connection.
      */
     synchronized void closeConnectedHandler() {

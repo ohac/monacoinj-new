@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 import java.io.Serializable;
 import java.util.List;

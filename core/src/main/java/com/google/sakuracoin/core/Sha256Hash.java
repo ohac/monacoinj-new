@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.monacoin.core;
+package com.google.sakuracoin.core;
 
 import com.google.common.io.ByteStreams;
 import org.spongycastle.util.encoders.Hex;
