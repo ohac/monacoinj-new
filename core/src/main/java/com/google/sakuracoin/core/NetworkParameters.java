@@ -97,7 +97,8 @@ public abstract class NetworkParameters implements Serializable {
         try {
             // A script containing the difficulty bits and the following message: 
             //
-            //   "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
+            //   "Dec. 19, 2013  Tokyo Gov. Inose announces resignation over money scandal"
+			//   TODO
             byte[] bytes = Hex.decode
                     ("04ffff001d01044c564465632e20333174682032303133204a6170616e2c205468652077696e6e696e67206e756d62657273206f6620746865203230313320596561722d456e64204a756d626f204c6f74746572793a32332d313330393136");
             t.addInput(new TransactionInput(n, t, bytes));
@@ -114,7 +115,7 @@ public abstract class NetworkParameters implements Serializable {
         return genesisBlock;
     }
 
-    public static final int TARGET_TIMESPAN = (int)(1.1 * 24 * 60 * 60);  // 1.1d per difficulty cycle, on average.
+    public static final int TARGET_TIMESPAN = (int)(2.5 * 24 * 60 * 60);  // 2.5d per difficulty cycle, on average.
     public static final int TARGET_SPACING = (int)(1.5 * 60);  // 1.5 minutes per block.
     public static final int INTERVAL = TARGET_TIMESPAN / TARGET_SPACING;
     
@@ -128,7 +129,7 @@ public abstract class NetworkParameters implements Serializable {
     /**
      * The maximum money to be generated
      */
-    public static final BigInteger MAX_MONEY = new BigInteger("168000000", 10).multiply(COIN);
+    public static final BigInteger MAX_MONEY = new BigInteger("105100000", 10).multiply(COIN);
 
     /** Alias for TestNet3Params.get(), use that instead. */
     @Deprecated

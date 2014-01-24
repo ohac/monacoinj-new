@@ -34,16 +34,16 @@ public class MainNetParams extends NetworkParameters {
         addressHeader = 50;
         //p2shHeader = 5; //We don't have this
         acceptableAddressCodes = new int[] { addressHeader };
-        port = 9401;
+        port = 9301;
         packetMagic = 0xfbc0b6db;
         genesisBlock.setDifficultyTarget(0x1e0ffff0L);
-        genesisBlock.setTime(1388479472L);
-        genesisBlock.setNonce(1234534L);
+        genesisBlock.setTime(0x52b28510L);
+        genesisBlock.setNonce(0x000fc9f2L);
         id = ID_MAINNET;
-        subsidyDecreaseBlockCount = 1051200;
+        subsidyDecreaseBlockCount = 1051000;
         spendableCoinbaseDepth = 100;
         String genesisHash = genesisBlock.getHashAsString();
-        checkState(genesisHash.equals("ff9f1c0116d19de7c9963845e129f9ed1bfc0b376eb54fd7afa42e0d418c8bb6"),
+        checkState(genesisHash.equals("4a4ea5016cc89f867500bc2d5bf317e72e0fecb2f4330b2a0921da3cd9bf245b"),
                 genesisBlock);
 
         // This contains (at a minimum) the blocks which are not BIP30 compliant. BIP30 changed how duplicate
@@ -58,7 +58,7 @@ public class MainNetParams extends NetworkParameters {
         //TODO Get actual Sakuracoin checkpoints
 
         dnsSeeds = new String[] {
-	    "dnsseed.sakuracoin.org"
+	    //"dnsseed.sakuracoin.org"
                 //TODO Add more...
         };
     }
