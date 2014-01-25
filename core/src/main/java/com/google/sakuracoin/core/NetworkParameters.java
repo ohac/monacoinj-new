@@ -98,9 +98,8 @@ public abstract class NetworkParameters implements Serializable {
             // A script containing the difficulty bits and the following message: 
             //
             //   "Dec. 19, 2013  Tokyo Gov. Inose announces resignation over money scandal"
-			//   TODO
             byte[] bytes = Hex.decode
-                    ("04ffff001d01044c564465632e20333174682032303133204a6170616e2c205468652077696e6e696e67206e756d62657273206f6620746865203230313320596561722d456e64204a756d626f204c6f74746572793a32332d313330393136");
+                    ("04ffff001d0104484465632e2031392c20323031332020546f6b796f20476f762e20496e6f736520616e6e6f756e6365732072657369676e6174696f6e206f766572206d6f6e6579207363616e64616c");
             t.addInput(new TransactionInput(n, t, bytes));
             ByteArrayOutputStream scriptPubKeyBytes = new ByteArrayOutputStream();
             Script.writeBytes(scriptPubKeyBytes, Hex.decode
