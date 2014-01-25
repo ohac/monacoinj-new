@@ -58,7 +58,7 @@ public class MainNetParams extends NetworkParameters {
         //TODO Get actual Sakuracoin checkpoints
 
         dnsSeeds = new String[] {
-            "dnsseed.sakuracoin.org" // TODO
+            "36-2-132-153.osaka.ap.gmo-isp.jp" // TODO
                 //TODO Add more...
         };
     }
