@@ -12,6 +12,7 @@ Now try running one of the example apps:
 
   cd examples
   mvn exec:java -Dexec.mainClass=com.google.sakuracoin.examples.ForwardingService <insert a sakuracoin address here>
+  mvn exec:java -Dexec.mainClass=TestWallet -Dexec.args="-testnet"
 
 It will download the block chain and eventually print a Sakuracoin address. If you send coins to it,
 it will forward them on to the address you specified.

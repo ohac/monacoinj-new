@@ -8,21 +8,31 @@ import com.google.sakuracoin.core.NetworkParameters;
 import com.google.sakuracoin.core.Peer;
 import com.google.sakuracoin.kits.WalletAppKit;
 import com.google.sakuracoin.params.MainNetParams;
+import com.google.sakuracoin.params.TestNet3Params;
 import com.google.sakuracoin.utils.Threading;
 
 
 public class TestWallet {
 
 	private WalletAppKit appKit;
+	private boolean testnet;
+	private NetworkParameters params;
 
 	public static void main(String[] args) throws Exception {
-		new TestWallet().run();
+		boolean testnet = false;
+		if (args.length == 1 && args[0].equals("-testnet")) {
+			testnet = true;
+		}
+		new TestWallet(testnet).run();
+	}
+
+	public TestWallet(boolean testnet) {
+		this.testnet = testnet;
+		params = testnet ? TestNet3Params.get() : MainNetParams.get();
 	}
 
 	public void run() throws Exception {
-		NetworkParameters params = MainNetParams.get();
-		
-		appKit = new WalletAppKit(params, new File("."), "sakuracoins") {
+		appKit = new WalletAppKit(params, new File("."), "sakuracoins" + (testnet ? "-testnet" : "")) {
 			@Override
 			protected void onSetupCompleted() {
 				if (wallet().getKeychainSize() < 1) {
