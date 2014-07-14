@@ -66,7 +66,7 @@ public abstract class NetworkParameters implements Serializable {
     protected int addressHeader;
     protected int p2shHeader;
     protected int dumpedPrivateKeyHeader;
-    protected int switchKGWBlock;
+    protected int switchV2Block;
     protected int interval;
     protected int targetTimespan;
     protected byte[] alertSigningKey;
@@ -118,7 +118,7 @@ public abstract class NetworkParameters implements Serializable {
     public static final int TARGET_TIMESPAN = (int)(2.5 * 24 * 60 * 60);  // 2.5d per difficulty cycle, on average.
     public static final int TARGET_SPACING = (int)(1.5 * 60);  // 1.5 minutes per block.
     public static final int INTERVAL = TARGET_TIMESPAN / TARGET_SPACING;
-    public static final int SWITCH_KGW_BLOCK = 1000000; // TODO
+    public static final int SWITCH_V2_BLOCK = 195000;
     
     /**
      * Blocks with a timestamp after this should enforce BIP 16, aka "Pay to script hash". This BIP changed the
@@ -306,8 +306,8 @@ public abstract class NetworkParameters implements Serializable {
         return interval;
     }
 
-    public int getSwitchKGWBlock() {
-        return switchKGWBlock;
+    public int getSwitchV2Block() {
+        return switchV2Block;
     }
 
     /** What the easiest allowable proof of work should be. */
