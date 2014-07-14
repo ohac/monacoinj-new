@@ -390,7 +390,12 @@ public abstract class AbstractBlockChain {
                 return false;
             } else {
                 // It connects to somewhere on the chain. Not necessarily the top of the best known chain.
-                checkDifficultyTransitions(storedPrev, block);
+                if (storedPrev.getHeight() + 1 < 195000) { // TODO
+                    checkDifficultyTransitions(storedPrev, block);
+                }
+                else {
+                    checkDifficultyTransitions_V2(storedPrev, block);
+                }
                 connectBlock(block, storedPrev, shouldVerifyTransactions(), filteredTxHashList, filteredTxn);
             }
 
@@ -859,6 +864,36 @@ public abstract class AbstractBlockChain {
         BigInteger mask = BigInteger.valueOf(0xFFFFFFL).shiftLeft(accuracyBytes * 8);
         newDifficulty = newDifficulty.and(mask);
 
+        if (newDifficulty.compareTo(receivedDifficulty) != 0)
+            throw new VerificationException("Network provided difficulty bits do not match what was calculated: " +
+                    receivedDifficulty.toString(16) + " vs " + newDifficulty.toString(16));
+    }
+
+    // DigiShield V2
+    private void checkDifficultyTransitions_V2(StoredBlock storedPrev, Block nextBlock) throws BlockStoreException, VerificationException {
+        checkState(lock.isHeldByCurrentThread());
+        Block prev = storedPrev.getHeader();
+        StoredBlock cursor = blockStore.get(prev.getHash());
+        cursor = blockStore.get(cursor.getHeader().getPrevBlockHash());
+        Block blockIntervalAgo = cursor.getHeader();
+        int timespan = (int) (prev.getTimeSeconds() - blockIntervalAgo.getTimeSeconds());
+        final int targetTimespan = params.getTargetTimespan();
+        timespan = targetTimespan + (timespan - targetTimespan) / 8;
+        if (timespan < targetTimespan - targetTimespan / 4)
+            timespan = targetTimespan - targetTimespan / 4;
+        if (timespan > targetTimespan + targetTimespan / 2)
+            timespan = targetTimespan + targetTimespan / 2;
+        BigInteger newDifficulty = Utils.decodeCompactBits(prev.getDifficultyTarget());
+        newDifficulty = newDifficulty.multiply(BigInteger.valueOf(timespan));
+        newDifficulty = newDifficulty.divide(BigInteger.valueOf(targetTimespan));
+        if (newDifficulty.compareTo(params.getProofOfWorkLimit()) > 0) {
+            log.info("Difficulty hit proof of work limit: {}", newDifficulty.toString(16));
+            newDifficulty = params.getProofOfWorkLimit();
+        }
+        int accuracyBytes = (int) (nextBlock.getDifficultyTarget() >>> 24) - 3;
+        BigInteger receivedDifficulty = nextBlock.getDifficultyTargetAsInteger();
+        BigInteger mask = BigInteger.valueOf(0xFFFFFFL).shiftLeft(accuracyBytes * 8);
+        newDifficulty = newDifficulty.and(mask);
         if (newDifficulty.compareTo(receivedDifficulty) != 0)
             throw new VerificationException("Network provided difficulty bits do not match what was calculated: " +
                     receivedDifficulty.toString(16) + " vs " + newDifficulty.toString(16));
