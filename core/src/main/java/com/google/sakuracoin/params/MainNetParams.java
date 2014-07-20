@@ -17,6 +17,7 @@
 package com.google.sakuracoin.params;
 
 import com.google.sakuracoin.core.NetworkParameters;
+import com.google.sakuracoin.core.Sha256Hash;
 import com.google.sakuracoin.core.Utils;
 
 import static com.google.common.base.Preconditions.checkState;
