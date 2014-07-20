@@ -48,7 +48,7 @@ public abstract class NetworkParameters implements Serializable {
     /**
      * The alert signing key originally owned by Satoshi, and now passed on to Gavin along with a few others.
      */
-    public static final byte[] SATOSHI_KEY = Hex.decode("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9");
+    public static final byte[] SATOSHI_KEY = Hex.decode("04fac6720b021321ff791bf785da89f3aedd2cd653addadfdba1652b78a11052caac22520fa4007daaf00c032ba3929ec6c54e2f4e9c2e9b2a7ec9fa1b0766f80f");
 
     /** The string returned by getId() for the main, production network where people trade things. */
     public static final String ID_MAINNET = "org.bitcoin.production";
@@ -118,8 +118,7 @@ public abstract class NetworkParameters implements Serializable {
     public static final int TARGET_TIMESPAN = (int)(2.5 * 24 * 60 * 60);  // 2.5d per difficulty cycle, on average.
     public static final int TARGET_SPACING = (int)(1.5 * 60);  // 1.5 minutes per block.
     public static final int INTERVAL = TARGET_TIMESPAN / TARGET_SPACING;
-    public static final int SWITCH_V2_BLOCK = 195000;
-    
+
     /**
      * Blocks with a timestamp after this should enforce BIP 16, aka "Pay to script hash". This BIP changed the
      * network rules in a soft-forking manner, that is, blocks that don't follow the rules are accepted but not
