@@ -28,7 +28,6 @@ public class MainNetParams extends NetworkParameters {
     public MainNetParams() {
         super();
         interval = INTERVAL;
-        switchV2Block = SWITCH_V2_BLOCK;
         targetTimespan = TARGET_TIMESPAN;
         proofOfWorkLimit = Utils.decodeCompactBits(0x1e0fffffL);
         dumpedPrivateKeyHeader = 178; //This is always addressHeader + 128
@@ -51,12 +50,9 @@ public class MainNetParams extends NetworkParameters {
         // transactions are handled. Duplicated transactions could occur in the case where a coinbase had the same
         // extraNonce and the same outputs but appeared at different heights, and greatly complicated re-org handling.
         // Having these here simplifies block connection logic considerably.
-        /* checkpoints.put(91722, new Sha256Hash("00000000000271a2dc26e7667f8419f2e15416dc6955e5a6c6cdf3f2574dd08e"));
-        checkpoints.put(91812, new Sha256Hash("00000000000af0aed4792b1acee3d966af36cf5def14935db8de83d6f9306f2f"));
-        checkpoints.put(91842, new Sha256Hash("00000000000a4d0a398161ffc163c503763b1f4360639393e0e4c8e300e0caec"));
-        checkpoints.put(91880, new Sha256Hash("00000000000743f190a18c5577a3c2d2a1f610ae9601ac046a38084ccb7cd721"));
-        checkpoints.put(200000, new Sha256Hash("000000000000034a7dedef4a161fa058a2d67a173a90155f3a2fe6fc132e0ebf")); */
-        //TODO Get actual Sakuracoin checkpoints
+        checkpoints.put( 77500, new Sha256Hash("93cff5764cc7b9af3285d18d98f0162f8ce534d01e7d00efd024c38e5541fd00"));
+        checkpoints.put(131644, new Sha256Hash("3fface7e113967b15a68fffdc341a7b5ef356654d2873fd1d475162258841453"));
+        checkpoints.put(184818, new Sha256Hash("dfcf2d438c6ecfe2413300a193f8a96628f7b2a23d753e526b80f9f23f9387bc"));
 
         dnsSeeds = new String[] {
             "skrseed.sighash.info"
