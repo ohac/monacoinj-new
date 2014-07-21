@@ -66,7 +66,6 @@ public abstract class NetworkParameters implements Serializable {
     protected int addressHeader;
     protected int p2shHeader;
     protected int dumpedPrivateKeyHeader;
-    protected int switchV2Block;
     protected int interval;
     protected int targetTimespan;
     protected byte[] alertSigningKey;
@@ -303,10 +302,6 @@ public abstract class NetworkParameters implements Serializable {
     /** How many blocks pass between difficulty adjustment periods. Bitcoin standardises this to be 2015. */
     public int getInterval() {
         return interval;
-    }
-
-    public int getSwitchV2Block() {
-        return switchV2Block;
     }
 
     /** What the easiest allowable proof of work should be. */
