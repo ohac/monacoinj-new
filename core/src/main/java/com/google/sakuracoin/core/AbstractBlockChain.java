@@ -877,7 +877,7 @@ public abstract class AbstractBlockChain {
         cursor = blockStore.get(cursor.getHeader().getPrevBlockHash());
         Block blockIntervalAgo = cursor.getHeader();
         int timespan = (int) (prev.getTimeSeconds() - blockIntervalAgo.getTimeSeconds());
-        final int targetTimespan = params.getTargetTimespan();
+        final int targetTimespan = NetworkParameters.TARGET_SPACING;
         timespan = targetTimespan + (timespan - targetTimespan) / 8;
         if (timespan < targetTimespan - targetTimespan / 4)
             timespan = targetTimespan - targetTimespan / 4;
